@@ -26,10 +26,10 @@ def convert_songs(dct):
 
 class Playlists(dict):
     def __init__(self):
-        with open('playlists.json') as s:
+        with open('./playlists.json') as s:
             super().__init__(json.load(s, object_hook=convert_songs))
     def save(self):
-        with open('playlists.json', 'w') as s:
+        with open('./playlists.json', 'w') as s:
             json.dump(self, s, indent=2, cls=SongEncoder)
     load = __init__
 playlists = Playlists()
