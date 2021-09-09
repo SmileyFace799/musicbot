@@ -3,6 +3,7 @@ from discord.ext import commands
 from exceptions import *
 import re
 from traceback import print_tb
+import socket
 
 cmd_order = {
     'playlist': ('view', 'create', 'delete', 'add', 'remove', 'play', 'quickplay', 'import')
@@ -51,12 +52,24 @@ for ext in exts:
     bot.load_extension(ext)
 
 @bot.event
+async def on_ready():
+    print('Bot is ready')
+
+@bot.event
 async def on_command_error(ctx, e):
     if isinstance(e, commands.CheckFailure):
         await ctx.send(f'{type(e).__name__}: {e}')
     else:
         await ctx.send(str(e))
     raise e
+
+@commands.is_owner()
+@bot.command()
+async def get_ip(ctx):
+    s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    s.connect(("8.8.8.8", 80))
+    await ctx.author.send(f'||{s.getsockname()[0]}||')
+    s.close()
 
 bot.run('NjUxNTYzMjUxODk2OTQyNjAy.XebtkA.5Rp2Ebx5UjwZR62Eotz8r7Hvf9c') #YorthiccBot
 #bot.run('NTg1OTU1NzExMzczMjc5MjYx.XPg_yA.f_jmUmoOAftaC_sSiGhVDOaFdTY') #WeeBot
