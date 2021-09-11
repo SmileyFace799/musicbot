@@ -30,7 +30,10 @@ class Song:
         return self
 
     def add_source(self, opts):
-        self.source = discord.FFmpegPCMAudio(pafy.new(self.id).getbestaudio().url, executable="./ffmpeg.exe", **opts)
+        pafy_object = pafy.new(self.id)
+        pafy_object.getbestaudio()
+        url = pafy_object.url
+        self.source = discord.FFmpegPCMAudio(url, executable="./ffmpeg.exe", **opts)
         self.has_source = True
         return self
 
