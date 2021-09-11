@@ -6,6 +6,7 @@ import re
 import pafy
 from html import unescape
 from random import randint
+from platform import system as get_os
 
 FFMPEG_OPTIONS = {'before_options': '-reconnect 1 -reconnect_streamed 1 -reconnect_delay_max 5','options': '-vn'}
 queues = {}
@@ -33,7 +34,7 @@ class Song:
         pafy_object = pafy.new(self.id)
         audio = pafy_object.getbestaudio()
         url = audio.url
-        self.source = discord.FFmpegPCMAudio(url, executable="./ffmpeg.exe", **opts)
+        self.source = discord.FFmpegPCMAudio(url, executable="./ffmpeg.exe", **opts) if get_os().lower().startswith('win') else discord.FFmpegPCMAudio(url, **opts)
         self.has_source = True
         return self
 
