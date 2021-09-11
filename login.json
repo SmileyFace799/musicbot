@@ -1,0 +1,14 @@
+{
+  "tunebot": {
+    "token": "NjUxNTYzMjUxODk2OTQyNjAy.XebtkA.5Rp2Ebx5UjwZR62Eotz8r7Hvf9c",
+    "prefix": "t!"
+  },
+  "weebot": {
+    "token": "NTg1OTU1NzExMzczMjc5MjYx.XPg_yA.f_jmUmoOAftaC_sSiGhVDOaFdTY",
+    "prefix": "w!"
+  },
+  "weebotdev": {
+    "token": "NjM3MDQ1NDg2NDIyOTgyNjc2.XbIc1w.vZrfMy6MG0qxQNPe_HJfm99N8Ps",
+    "prefix": "w#"
+  }
+}

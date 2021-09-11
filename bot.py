@@ -1,9 +1,19 @@
 import discord
 from discord.ext import commands
 from exceptions import *
+import json
 import re
 from traceback import print_tb
 import socket
+
+class Active_Bot:
+    def __init__(self, name):
+        self.name = name
+        with open('./login.json') as f:
+            login = json.load(f)[name.lower()]
+        self.token = login['token']
+        self.prefix = login['prefix']
+active = Active_Bot('WeeBot')
 
 cmd_order = {
     'playlist': ('view', 'create', 'delete', 'add', 'remove', 'play', 'quickplay', 'import')
@@ -19,7 +29,7 @@ class MyHelpCommand(commands.HelpCommand):
         *Note: The category or command you enter will be case sensitive. I don't know how to change that*'''
 
     async def send_bot_help(self, mapping):
-        e = discord.Embed(title='TUNEBOT HELP', color=discord.Color.blurple(), description=self.desc())
+        e = discord.Embed(title=f'{active.name.upper()} HELP', color=discord.Color.blurple(), description=self.desc())
         for cog in mapping:
             e.add_field(name=cog.qualified_name if cog else 'No category', value='\n'.join(f'**-** {command.name}' for command in mapping[cog]), inline=False)
         await self.get_destination().send(embed=e)
@@ -45,7 +55,7 @@ class MyHelpCommand(commands.HelpCommand):
         e.set_footer(text=self.usage_desc)
         await self.get_destination().send(embed=e)
 
-bot = commands.Bot(command_prefix='t!', case_insensitive=True, intents=discord.Intents.all(), help_command=MyHelpCommand(verify_checks=None))
+bot = commands.Bot(command_prefix=active.prefix, case_insensitive=True, intents=discord.Intents.all(), help_command=MyHelpCommand(verify_checks=None))
 
 exts = ('music', 'playlist')
 for ext in exts:
@@ -63,14 +73,28 @@ async def on_command_error(ctx, e):
         await ctx.send(str(e))
     raise e
 
+@bot.command(
+    brief='This is a test command, don\'t use this',
+    help='This is a test command, don\'t use this',
+    usage='No, don\'t'
+)
+async def hello(self, ctx, arg1=None, *, arg2=None):
+    await ctx.send(f'Hello!\narg1: {arg1}\narg2: {arg2}')
+
 @commands.is_owner()
-@bot.command()
+@bot.command(
+    brief='Doesn\'t do anything',
+    help='Doesn\'t do anything, atleast not for you :)',
+    usage='ip'
+)
 async def ip(ctx):
     s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     s.connect(("8.8.8.8", 80))
     await ctx.author.send(f'||{s.getsockname()[0]}||')
     s.close()
 
-bot.run('NjUxNTYzMjUxODk2OTQyNjAy.XebtkA.5Rp2Ebx5UjwZR62Eotz8r7Hvf9c') #YorthiccBot
+#bot.run('NjUxNTYzMjUxODk2OTQyNjAy.XebtkA.5Rp2Ebx5UjwZR62Eotz8r7Hvf9c') #YorthiccBot
 #bot.run('NTg1OTU1NzExMzczMjc5MjYx.XPg_yA.f_jmUmoOAftaC_sSiGhVDOaFdTY') #WeeBot
 #bot.run('NjM3MDQ1NDg2NDIyOTgyNjc2.XbIc1w.vZrfMy6MG0qxQNPe_HJfm99N8Ps') #WeeBotDev
+
+bot.run(active.token)

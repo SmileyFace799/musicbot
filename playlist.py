@@ -26,11 +26,11 @@ def convert_songs(dct):
 
 class Playlists(dict):
     def __init__(self):
-        with open('./playlists.json') as s:
-            super().__init__(json.load(s, object_hook=convert_songs))
+        with open('./playlists.json') as p:
+            super().__init__(json.load(p, object_hook=convert_songs))
     def save(self):
-        with open('./playlists.json', 'w') as s:
-            json.dump(self, s, indent=2, cls=SongEncoder)
+        with open('./playlists.json', 'w') as p:
+            json.dump(self, p, indent=2, cls=SongEncoder)
     load = __init__
 playlists = Playlists()
 
@@ -134,8 +134,10 @@ class Playlist(commands.Cog):
         playlist = get_list(ctx, playlist)
         if index is not None: await queue_song(ctx, playlist[index - 1])
         else:
-            playlist = list(playlist)
-            playlist.insert(0, playlist.pop(randint(0, len(playlist) - 1)))
+            queue = get_queue(ctx)
+            if queue is not None and queue.shuffle:
+                playlist = list(playlist)
+                playlist.insert(0, playlist.pop(randint(0, len(playlist) - 1)))
             await queue_list(ctx, playlist)
 
     @vc()

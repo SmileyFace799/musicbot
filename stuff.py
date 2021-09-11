@@ -38,6 +38,9 @@ class Song:
         self.has_source = True
         return self
 
+    def copy(self):
+        return self.__class__(self.id, self.title, self.artist)
+
 class Queue(list):
     def __init__(self, ctx):
         self.guild = ctx.guild
@@ -97,6 +100,7 @@ def del_queue(ctx):
     if id in queues.keys(): del queues[id]
 
 async def queue_song(ctx, song, queue=None, announce=True):
+    song = song.copy()
     if not song.has_ctx: song.add_ctx(ctx)
     if not queue: queue = make_queue(ctx)
     queue.append(song) #Song must have ctx

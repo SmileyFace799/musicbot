@@ -8,14 +8,6 @@ import typing
 genius = Genius('acU_6ftNqV-0zCxqo7d9gG7r__FnpVh6YAXIQD-CedWBuoxySEidUwoYn8h6Mt9O')
 
 class Music(commands.Cog):
-    @commands.command(
-        brief='This is a test command, don\'t use this',
-        help='This is a test command, don\'t use this',
-        usage='No, don\'t'
-    )
-    async def hello(self, ctx, arg1=None, *, arg2=None):
-        await ctx.send(f'Hello!\narg1: {arg1}\narg2: {arg2}')
-
     @commands.guild_only()
     @commands.command(
         brief='Joins a voice channel',
@@ -24,7 +16,8 @@ class Music(commands.Cog):
     )
     async def join(self, ctx):
         if not ctx.author.voice: raise NoVoiceException('Not connected to a voice chat')
-        join_voice(ctx)
+        await ctx.author.voice.channel.connect()
+        make_queue(ctx)
         await ctx.send('Joined!')
 
     @vc()
@@ -82,7 +75,8 @@ class Music(commands.Cog):
     @commands.command(
         brief='Shows the queue',
         help='Shows the bot\'s song queue, and if the queue is shuffled, if the queue is repeating, and if the current song is repeating',
-        usage='queue'
+        usage='queue',
+        aliases=['que', 'q']
     )
     async def queue(self, ctx):
         get_str = lambda b: 'On' if b else 'Off'
@@ -138,7 +132,8 @@ class Music(commands.Cog):
     @commands.command(
         brief='Shuffles queue',
         help='This shuffles the song order of the queue',
-        usage='shuffle'
+        usage='shuffle',
+        aliases=['mix', 'shf', 'sf']
     )
     async def shuffle(self, ctx):
         queue = get_queue(ctx)
@@ -150,7 +145,8 @@ class Music(commands.Cog):
     @commands.command(
         brief='Repeats a song',
         help='Repeats the currently playing song. To repeat the whole queue, use `repeatqueue` instead',
-        usage='repeat'
+        usage='repeat',
+        aliases=['rpt', 'rp']
     )
     async def repeat(self, ctx):
         queue = get_queue(ctx)
@@ -162,7 +158,8 @@ class Music(commands.Cog):
     @commands.command(
         brief='Repeats the queue',
         help='Repeats the queue. To repeat only a song, use `repeat` instead',
-        usage='repeatqueue'
+        usage='repeatqueue',
+        aliases=['repeatque', 'repeatq', 'rqueue', 'rque', 'rq']
     )
     async def repeatqueue(self, ctx):
         queue = get_queue(ctx)
