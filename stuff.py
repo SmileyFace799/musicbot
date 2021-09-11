@@ -31,8 +31,8 @@ class Song:
 
     def add_source(self, opts):
         pafy_object = pafy.new(self.id)
-        pafy_object.getbestaudio()
-        url = pafy_object.url
+        audio = pafy_object.getbestaudio()
+        url = audio.url
         self.source = discord.FFmpegPCMAudio(url, executable="./ffmpeg.exe", **opts)
         self.has_source = True
         return self
