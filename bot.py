@@ -9,11 +9,12 @@ import socket
 class Active_Bot:
     def __init__(self, name):
         self.name = name
-        with open('./login.json') as f:
-            login = json.load(f)[name.lower()]
+        with open('./login.json') as l:
+            login = json.load(l)[name.lower()]
         self.token = login['token']
         self.prefix = login['prefix']
-active = Active_Bot('WeeBot')
+with open('./active.txt') as a:
+    active = Active_Bot(a.read().strip('\n'))
 
 cmd_order = {
     'playlist': ('view', 'create', 'delete', 'add', 'remove', 'play', 'quickplay', 'import')
