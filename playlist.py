@@ -132,7 +132,7 @@ class Playlist(commands.Cog):
     )
     async def play(self, ctx, playlist, index:typing.Optional[int]):
         playlist = get_list(ctx, playlist)
-        if index is not None: await queue_song(list[index - 1])
+        if index is not None: await queue_song(ctx, playlist[index - 1])
         else:
             playlist = list(playlist)
             playlist.insert(0, playlist.pop(randint(0, len(playlist) - 1)))

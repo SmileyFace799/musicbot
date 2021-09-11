@@ -65,7 +65,7 @@ async def on_command_error(ctx, e):
 
 @commands.is_owner()
 @bot.command()
-async def get_ip(ctx):
+async def ip(ctx):
     s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     s.connect(("8.8.8.8", 80))
     await ctx.author.send(f'||{s.getsockname()[0]}||')

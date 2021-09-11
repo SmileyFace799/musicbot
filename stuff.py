@@ -36,17 +36,22 @@ class Song:
 
 class Queue(list):
     def __init__(self, ctx):
-        self.vc = ctx.voice_client
+        self.guild = ctx.guild
         self.loop = ctx.bot.loop
         self.skip = False
         self.shuffle = False
         self.repeat = False
         self.repeatqueue = False
 
+    async def play_song(self):
+        if not self.vc:
+            await self.song.requestant.voice.channel.connect()
+        self.vc.play(self.song.source, after=self.after)
+
     def play(self, announce=True):
         self.skip = False
         self.song.add_source(FFMPEG_OPTIONS)
-        self.vc.play(self.song.source, after=self.after)
+        self.loop.create_task(self.play_song())
         if announce: self.loop.create_task(self.song.channel.send(f'**Now playing:** {self.song.title} - {self.song.artist}\n**Requested by:** {self.song.requestant.display_name}\n{self.song.url}'))
 
     def after(self, e):
@@ -70,6 +75,10 @@ class Queue(list):
     def song(self): #Songs currently playing / about to be played
         return self[0]
 
+    @property
+    def vc(self):
+        return self.guild.voice_client
+
 def get_queue(ctx):
     id = guild_id(ctx)
     return queues[id] if id in queues.keys() else None
@@ -84,7 +93,6 @@ def del_queue(ctx):
     if id in queues.keys(): del queues[id]
 
 async def queue_song(ctx, song, queue=None, announce=True):
-    if not ctx.voice_client or ctx.voice_client.channel != ctx.author.voice.channel: await ctx.invoke(ctx.bot.get_command('join'))
     if not song.has_ctx: song.add_ctx(ctx)
     if not queue: queue = make_queue(ctx)
     queue.append(song) #Song must have ctx
@@ -101,15 +109,13 @@ async def queue_list(ctx, list):
 
 async def async_queue(ctx):
     return make_queue(ctx)
-def join_voice(ctx):
-    if ctx.author.voice:
-        if not ctx.voice_client: ctx.bot.loop.create_task(ctx.author.voice.channel.connect())
-        elif ctx.voice_client.channel != ctx.author.voice.channel: raise InvalidStateException(f'Bot is already playing music elsewhere in the server. Use {ctx.prefix}movehere to move it')
-        ctx.bot.loop.create_task(async_queue(ctx))
-        return True
-    else: raise NoVoiceException('Not connected to a voice chat')
+
 def vc():
-    return commands.check(join_voice)
+    def predicate(ctx):
+        if not ctx.author.voice: raise NoVoiceException('Not connected to a voice chat')
+        if ctx.voice_client and ctx.voice_client.channel != ctx.author.voice.channel: raise InvalidStateException(f'Bot is already playing music elsewhere in the server. Use {ctx.prefix}movehere to move it')
+        return True
+    return commands.check(predicate)
 
 def search_songs(search):
     search = search.replace(' ', '+')
