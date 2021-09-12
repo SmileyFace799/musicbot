@@ -79,7 +79,7 @@ async def on_command_error(ctx, e):
     help='This is a test command, don\'t use this',
     usage='No, don\'t'
 )
-async def hello(self, ctx, arg1=None, *, arg2=None):
+async def hello(ctx, arg1=None, *, arg2=None):
     await ctx.send(f'Hello!\narg1: {arg1}\narg2: {arg2}')
 
 @commands.is_owner()

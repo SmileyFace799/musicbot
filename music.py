@@ -50,14 +50,18 @@ class Music(commands.Cog):
     @commands.guild_only()
     @commands.command(
         brief='Play a song',
-        help='Plays a song in a voice channel. Can either be a url or a YouTube search. The bot will join automatically upon playing. Currently supports: YouTube',
+        help='Plays a song in a voice channel. Can either be a url or a YouTube search. The bot will join automatically upon playing. Currently supports: YouTube, Spotify',
         usage='play [search|url]'
     )
     async def play(self, ctx, *, search):
-        if search.startswith('https://www.youtube.com/watch?v='): await queue_song(ctx, Song(search[32:43]))
-        else:
-            songs = search_songs(search)
-            await queue_song(ctx, next(songs))
+        if search.startswith('https://www.youtube.com/watch?v='):
+            await queue_song(ctx, Song(search[32:43]))
+            return
+        if search.startswith('https://open.spotify.com/track/'):
+            track = sp.track(search)
+            search = f'{track["name"]} {track["artists"][0]["name"]} - topic'
+        songs = search_songs(search)
+        await queue_song(ctx, next(songs))
 
     @vc()
     @commands.guild_only()
@@ -75,18 +79,24 @@ class Music(commands.Cog):
     @commands.command(
         brief='Shows the queue',
         help='Shows the bot\'s song queue, and if the queue is shuffled, if the queue is repeating, and if the current song is repeating',
-        usage='queue',
+        usage='queue *[page]',
         aliases=['que', 'q']
     )
-    async def queue(self, ctx):
+    async def queue(self, ctx, page:typing.Optional[int]=1):
+        page_size = 20
         get_str = lambda b: 'On' if b else 'Off'
         queue = get_queue(ctx)
-        if queue is not None:
-            await ctx.send(f'**Shuffle:** {get_str(queue.shuffle)}\n**Repeat song:** {get_str(queue.repeat)}\n**Repeat queue:** {get_str(queue.repeatqueue)}\n\nCurrent queue:\n' + '\n'.join(
-                f'  **{"-" if index != 0 else "Current:"}** {song.title} - {song.artist}' if queue.shuffle else \
-                f'  **{index + 1 if index != 0 else "Current"}:** {song.title} - {song.artist}'for index, song in enumerate(queue)
-            ))
-        else: await ctx.send('Bot is currently not playing music')
+        pagecount = (len(queue) - 1) // page_size + 1
+        page_queue = queue[page_size * (page - 1):page_size * page]
+        if queue:
+            await ctx.send(f'**Shuffle:** {get_str(queue.shuffle)}\n**Repeat song:** {get_str(queue.repeat)}\n**Repeat queue:** {get_str(queue.repeatqueue)}\n\nCurrent queue:\n' + \
+                '\n'.join(
+                    f'  **{"-" if index != 0 or page != 1 else "Current:"}** {song.title} - {song.artist}' if queue.shuffle else \
+                    f'  **{page_size * (page - 1) + index + 1 if index != 0 or page != 1 else "Current"}:** {song.title} - {song.artist}' for index, song in enumerate(page_queue)
+                ) + f'\n\nShowing page **{page}** of **{pagecount}**'
+
+            )
+        else: await ctx.send(f'**Shuffle:** {get_str(queue.shuffle)}\n**Repeat song:** {get_str(queue.repeat)}\n**Repeat queue:** {get_str(queue.repeatqueue)}\n\nQueue is empty')
 
     @vc()
     @commands.guild_only()

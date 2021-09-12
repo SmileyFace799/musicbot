@@ -1,16 +1,21 @@
 import discord
 from discord.ext import commands
 from exceptions import *
+import spotipy
+from spotipy.oauth2 import SpotifyClientCredentials
 from urllib.request import urlopen
+from urllib.parse import quote
 import re
 import pafy
 from html import unescape
+from datetime import datetime as dt
 from random import randint
 from platform import system as get_os
 
 FFMPEG_OPTIONS = {'before_options': '-reconnect 1 -reconnect_streamed 1 -reconnect_delay_max 5','options': '-vn'}
 queues = {}
 guild_id = lambda ctx: ctx.guild.id if ctx.guild else None
+sp = spotipy.Spotify(client_credentials_manager=SpotifyClientCredentials(client_id='50a7e02b71c24576a259fe1e8b2df078', client_secret='dba494661d2c4812b1d158cd87f54f98'))
 
 class Song:
     def __init__(self, id, title=None, artist=None, ctx=None, source_opts=None):
@@ -109,14 +114,18 @@ async def queue_song(ctx, song, queue=None, announce=True):
     elif announce:
         await ctx.send(f"**Added to queue:** {song.title} - {song.artist}\n**Added by:** {ctx.author.display_name}\n{song.url}")
 
-async def queue_list(ctx, list):
-    msg = await ctx.send(f'Queuing playlist...')
-    for index, song in enumerate(list):
+async def queue_list(ctx, playlist):
+    msg = await ctx.send('Queuing playlist... (Songs queued: 0)')
+    _count = 0
+    _now = dt.now()
+    for song in playlist:
         await queue_song(ctx, song, announce=False)
+        _count += 1
+        if msg and (dt.now() - _now).total_seconds() > 2:
+            await msg.edit(content=f'Queuing playlist... (Songs queued: {_count})')
+            _now = dt.now()
+    await msg.edit(content=f'Queuing playlist... (Songs queued: {_count})')
     await ctx.send('Playlist queued!')
-
-async def async_queue(ctx):
-    return make_queue(ctx)
 
 def vc():
     def predicate(ctx):
@@ -127,6 +136,7 @@ def vc():
 
 def search_songs(search):
     search = search.replace(' ', '+')
+    search = quote(search, safe='+')
     html = urlopen(f"https://www.youtube.com/results?search_query={search}&sp=EgIQAQ%253D%253D").read().decode().split('"videoRenderer":{"videoId":')
     html.pop(0)
     if not html: raise NotFoundException('No results')
@@ -139,14 +149,28 @@ def search_songs(search):
         artist = re.search('"longBylineText":{"runs":\[{"text":"(.*?)","navigationEndpoint":', text).group(1)
         yield Song(id, title, artist)
 
+def get_playlist_tracks(playlist_id):
+    results = sp.playlist(playlist_id)['tracks']
+    tracks = results['items']
+    while results['next']:
+        results = sp.next(results)
+        tracks.extend(results['items'])
+    return tracks
+
 def search_playlist(url):
-    if not url.startswith('https://www.youtube.com/playlist?list='): raise commands.BadArgument('Please provide a playlist URL')
-    html = urlopen(url).read().decode()
-    ids = re.findall('{"playlistVideoRenderer":{"videoId":"(.*?)"', html)
-    titles = re.findall(r'"title":{"runs":\[{"text":"(.*?)"}\],"accessibility":', html)
-    artists = re.findall('"shortBylineText":{"runs":\[{"text":"(.*?)","navigationEndpoint":', html)
-    for id, title, artist in zip(ids, titles, artists):
-        yield Song(id, title, artist)
+    if url.startswith('https://www.youtube.com/playlist?list='):
+        html = urlopen(url).read().decode()
+        ids = re.findall('{"playlistVideoRenderer":{"videoId":"(.*?)"', html)
+        titles = re.findall(r'"title":{"runs":\[{"text":"(.*?)"}\],"accessibility":', html)
+        artists = re.findall('"shortBylineText":{"runs":\[{"text":"(.*?)","navigationEndpoint":', html)
+        for id, title, artist in zip(ids, titles, artists):
+            yield Song(id, title, artist)
+    elif url.startswith('https://open.spotify.com/playlist/'):
+        tracks = get_playlist_tracks(url)
+        for track in tracks:
+            track = track['track']
+            yield next(search_songs(f'{track["name"]} {track["artists"][0]["name"]} - topic'))
+    else: raise commands.BadArgument('Please provide a playlist URL')
 
 async def find_song(ctx, search):
     songs = search_songs(search)
