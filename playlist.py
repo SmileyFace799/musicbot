@@ -4,6 +4,7 @@ import typing
 from stuff import *
 from exceptions import *
 import json
+from datetime import datetime as dt
 from random import randint
 
 class SongEncoder(json.JSONEncoder):
@@ -144,7 +145,7 @@ class Playlist(commands.Cog):
     @commands.guild_only()
     @playlist.command(
         brief='Plays a playlist from URL',
-        help='This plays a specified playlist, provided by URL. Note: This does not play bot playlists, to play bot playlists, see `playlist play`. Currently supports: YouTube',
+        help='This plays a specified playlist, provided by URL. Note: This does not play bot playlists, to play bot playlists, see `playlist play`. Currently supports: YouTube, Spotify',
         usage='playlist quickplay [url]'
     )
     async def quickplay(self, ctx, url):
@@ -154,7 +155,7 @@ class Playlist(commands.Cog):
     @playlist.command(
         name='import',
         brief='Imports an external playlist into the bot',
-        help='This imports a playlist provided by URL into the bot. Can be imported into an existing playlist, or into a new one. This only imports external playlists, to combine playlists within the bot, see `playlist combine`. Currently supports: YouTube',
+        help='This imports a playlist provided by URL into the bot. Can be imported into an existing playlist, or into a new one. This only imports external playlists, to combine playlists within the bot, see `playlist combine`. Currently supports: YouTube, Spotify',
         usage='playlist import [name|list] [url]'
     )
     async def import_playlist(self, ctx, name, url):
@@ -163,10 +164,17 @@ class Playlist(commands.Cog):
         if list is None:
             await ctx.invoke(ctx.bot.get_command('playlist create'), name=name)
             list = get_list(ctx, name)
-        await ctx.send(f'Importing playlist...')
+        msg = await ctx.send(f'Importing playlist... (Songs imported: 0)')
+        _count = 0
+        _now = dt.now()
         for song in playlist:
             list.append(song)
+            _count += 1
+            if (dt.now() - _now).total_seconds() > 2:
+                await msg.edit(content=f'Importing playlist... (Songs imported: {_count})')
+                _now = dt.now()
         playlists.save()
+        await msg.edit(content=f'Importing playlist... (songs imported: {_count})')
         await ctx.send('Playlist imported!')
 
     @playlist.command(
