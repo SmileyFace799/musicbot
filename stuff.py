@@ -16,6 +16,8 @@ FFMPEG_OPTIONS = {'before_options': '-reconnect 1 -reconnect_streamed 1 -reconne
 queues = {}
 guild_id = lambda ctx: ctx.guild.id if ctx.guild else None
 sp = spotipy.Spotify(client_credentials_manager=SpotifyClientCredentials(client_id='50a7e02b71c24576a259fe1e8b2df078', client_secret='dba494661d2c4812b1d158cd87f54f98'))
+playlist_urls = ('https://www.youtube.com/playlist?list=', 'https://open.spotify.com/playlist/')
+is_url_playlist = lambda url: any(filter(lambda playlist_url: url.startswith(playlist_url), playlist_urls))
 
 class Song:
     def __init__(self, id, title=None, artist=None, ctx=None, source_opts=None):
@@ -149,7 +151,7 @@ def search_songs(search):
         artist = re.search('"longBylineText":{"runs":\[{"text":"(.*?)","navigationEndpoint":', text).group(1)
         yield Song(id, title, artist)
 
-def get_playlist_tracks(playlist_id):
+def get_playlist_tracks(playlist_id): #For spotify playlists
     results = sp.playlist(playlist_id)['tracks']
     tracks = results['items']
     while results['next']:

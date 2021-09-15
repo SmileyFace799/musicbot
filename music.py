@@ -54,14 +54,16 @@ class Music(commands.Cog):
         usage='play [search|url]'
     )
     async def play(self, ctx, *, search):
-        if search.startswith('https://www.youtube.com/watch?v='):
+        if is_url_playlist(search):
+            await ctx.invoke(ctx.bot.get_command('playlist quickplay'), search)
+        elif search.startswith('https://www.youtube.com/watch?v='):
             await queue_song(ctx, Song(search[32:43]))
-            return
-        if search.startswith('https://open.spotify.com/track/'):
-            track = sp.track(search)
-            search = f'{track["name"]} {track["artists"][0]["name"]} - topic'
-        songs = search_songs(search)
-        await queue_song(ctx, next(songs))
+        else:
+            if search.startswith('https://open.spotify.com/track/'):
+                track = sp.track(search)
+                search = f'{track["name"]} {track["artists"][0]["name"]} - topic'
+            songs = search_songs(search)
+            await queue_song(ctx, next(songs))
 
     @vc()
     @commands.guild_only()

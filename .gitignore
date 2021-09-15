@@ -2,3 +2,5 @@
 *.pyc
 ffmpeg.exe
 active.txt
+*.html
+*.cache
