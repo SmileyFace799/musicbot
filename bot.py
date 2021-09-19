@@ -4,7 +4,6 @@ from exceptions import *
 import json
 import re
 from traceback import print_tb
-import socket
 
 class Active_Bot:
     def __init__(self, name):
@@ -58,7 +57,7 @@ class MyHelpCommand(commands.HelpCommand):
 
 bot = commands.Bot(command_prefix=active.prefix, case_insensitive=True, intents=discord.Intents.all(), help_command=MyHelpCommand(verify_checks=None))
 
-exts = ('music', 'playlist')
+exts = ('music', 'playlist', 'testing')
 for ext in exts:
     bot.load_extension(ext)
 
@@ -73,26 +72,6 @@ async def on_command_error(ctx, e):
     else:
         await ctx.send(str(e))
     raise e
-
-@bot.command(
-    brief='This is a test command, don\'t use this',
-    help='This is a test command, don\'t use this',
-    usage='No, don\'t'
-)
-async def hello(ctx, arg1=None, *, arg2=None):
-    await ctx.send(f'Hello!\narg1: {arg1}\narg2: {arg2}')
-
-@commands.is_owner()
-@bot.command(
-    brief='Doesn\'t do anything',
-    help='Doesn\'t do anything, atleast not for you :)',
-    usage='ip'
-)
-async def ip(ctx):
-    s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-    s.connect(("8.8.8.8", 80))
-    await ctx.author.send(f'||{s.getsockname()[0]}||')
-    s.close()
 
 #bot.run('NjUxNTYzMjUxODk2OTQyNjAy.XebtkA.5Rp2Ebx5UjwZR62Eotz8r7Hvf9c') #YorthiccBot
 #bot.run('NTg1OTU1NzExMzczMjc5MjYx.XPg_yA.f_jmUmoOAftaC_sSiGhVDOaFdTY') #WeeBot

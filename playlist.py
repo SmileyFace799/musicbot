@@ -60,11 +60,19 @@ class Playlist(commands.Cog):
         help='This commands can be used to view all your playlists, aswell as viewing all the songs within any of them',
         usage='playlist view \\*[playlist]'
     )
-    async def view(self, ctx, playlist=None):
-        if playlist:
-            list = get_list(ctx, playlist)
-            if list is None: raise NotFoundException('Playlist not found')
-            await ctx.send(f'Showing playlist: **{playlist}**\n' + '\n'.join(f'  **{i + 1}:** {song.title} - {song.artist}' for i, song in enumerate(list)))
+    async def view(self, ctx, listname=None, page:typing.Optional[int]=1):
+        if listname:
+            playlist = get_list(ctx, listname)
+            if playlist is None: raise NotFoundException('Playlist not found')
+            elif not playlist: await ctx.send(f'Playlist {listname} is empty')
+            else:
+                pagecount = (len(playlist) - 1) // page_size + 1
+                page_playlist = playlist[page_size * (page - 1):page_size * page]
+                await ctx.send(
+                    f'Showing playlist: **{listname}**\n' + \
+                    '\n'.join(f'  **{page_size * (page - 1) + i + 1}:** {song.title} - {song.artist}' for i, song in enumerate(page_playlist)) + \
+                    f'\n\nShowing page **{page}** of **{pagecount}**'
+                )
         else:
             entry = get_entry(ctx)
             if entry: await ctx.send('Your playlists:\n  **-** ' + '\n  **-** '.join(entry.keys()))
@@ -127,8 +135,8 @@ class Playlist(commands.Cog):
     @vc()
     @commands.guild_only()
     @playlist.command(
-        brief='Plays a bot playlist',
-        help='This plays a specified playlist in the voice channel you\'re in. Note: This plays bot playlists only, to play other playlists directly, see `playlist quickplay` or `playlist import`',
+        brief='Plays a bot playlist, or a specific song from a bot playlist',
+        help='This plays a specified playlist in the voice channel you\'re in. Can also play one specific song from the list instead of the whole list, if an index is provided. Note: This plays bot playlists only, to play external playlists, see `playlist quickplay` or `playlist import`',
         usage='playlist play [playlist] *[index]'
     )
     async def play(self, ctx, playlist, index:typing.Optional[int]):
@@ -145,7 +153,7 @@ class Playlist(commands.Cog):
     @commands.guild_only()
     @playlist.command(
         brief='Plays a playlist from URL',
-        help='This plays a specified playlist, provided by URL. Note: This does not play bot playlists, to play bot playlists, see `playlist play`. Currently supports: YouTube, Spotify',
+        help='This plays an external playlist, provided by URL. The `play` command also works as a shortcut for this one. Note: This does not play bot playlists, to play bot playlists, see `playlist play`. Currently supports: YouTube, Spotify',
         usage='playlist quickplay [url]'
     )
     async def quickplay(self, ctx, url):
@@ -179,8 +187,8 @@ class Playlist(commands.Cog):
 
     @playlist.command(
         brief='Combines playlists together',
-        help='This combines two playlists together, either by combining them into the 1st list, or a 3rd target list if provided. If the 3rd target list doesn\'t exist, it will be automatically made. This only combines playlists stored within the bot, for external playlists, see `playlist import`',
-        usage='playlist combine [list1] [list2] *[name|targetlist]'
+        help='This combines two playlists together, either by combining them into the 1st list, or a 3rd target list if provided. If the 3rd target list doesn\'t exist, it will be automatically created. This only combines playlists stored within the bot, to import external playlists, see `playlist import`',
+        usage='playlist combine [list1] [list2] *[targetlist]'
     )
     async def combine(self, ctx, name1, name2, targetname=None):
         list1 = get_list(ctx, name1)

@@ -1,13 +1,26 @@
 import discord
-from discord.ext import commands
+from discord.ext import commands, tasks
 from stuff import *
 from exceptions import *
 import re
 from lyricsgenius import Genius
 import typing
+from datetime import datetime as dt
 genius = Genius('acU_6ftNqV-0zCxqo7d9gG7r__FnpVh6YAXIQD-CedWBuoxySEidUwoYn8h6Mt9O')
 
 class Music(commands.Cog):
+    def __init__(self, bot):
+        self.bot = bot
+        self.queue_cleaner.start()
+
+    @tasks.loop(seconds=5)
+    async def queue_cleaner(self):
+        now = dt.now()
+        ids = reversed(tuple(i for i, queue in queues.items() if not queue.vc.is_playing() and (now - queue.last_played).total_seconds() > 300))
+        for i in ids:
+            await queues[i].vc.disconnect()
+            del queues[i]
+
     @commands.guild_only()
     @commands.command(
         brief='Joins a voice channel',
@@ -25,7 +38,7 @@ class Music(commands.Cog):
     @commands.command(
         brief='Moves the bot to a voice channel',
         help='This moves the bot from a different voice channel to the current one. If the bot is not in a voice channel, use `join` instead, if needed',
-        bried='movehere'
+        usage='movehere'
     )
     async def movehere(self, ctx):
         if not ctx.voice_client: raise InvalidStateException(f'Bot is not connected. Use {ctx.prefix}join instead')
@@ -50,7 +63,7 @@ class Music(commands.Cog):
     @commands.guild_only()
     @commands.command(
         brief='Play a song',
-        help='Plays a song in a voice channel. Can either be a url or a YouTube search. The bot will join automatically upon playing. Currently supports: YouTube, Spotify',
+        help='Plays a song or in a voice channel. Can either be a url or a YouTube search. The bot will join automatically upon playing. This can also be used as a shortcut for `playlist quickplay` to play external playlists. Currently supports: YouTube, Spotify',
         usage='play [search|url]'
     )
     async def play(self, ctx, *, search):
@@ -85,18 +98,15 @@ class Music(commands.Cog):
         aliases=['que', 'q']
     )
     async def queue(self, ctx, page:typing.Optional[int]=1):
-        page_size = 20
         get_str = lambda b: 'On' if b else 'Off'
         queue = get_queue(ctx)
         pagecount = (len(queue) - 1) // page_size + 1
         page_queue = queue[page_size * (page - 1):page_size * page]
         if queue:
-            await ctx.send(f'**Shuffle:** {get_str(queue.shuffle)}\n**Repeat song:** {get_str(queue.repeat)}\n**Repeat queue:** {get_str(queue.repeatqueue)}\n\nCurrent queue:\n' + \
-                '\n'.join(
-                    f'  **{"-" if index != 0 or page != 1 else "Current:"}** {song.title} - {song.artist}' if queue.shuffle else \
-                    f'  **{page_size * (page - 1) + index + 1 if index != 0 or page != 1 else "Current"}:** {song.title} - {song.artist}' for index, song in enumerate(page_queue)
-                ) + f'\n\nShowing page **{page}** of **{pagecount}**'
-
+            await ctx.send(f'**Shuffle:** {get_str(queue.shuffle)}\n**Repeat song:** {get_str(queue.repeat)}\n**Repeat queue:** {get_str(queue.repeatqueue)}' + \
+                ('\n\nCurrent queue (not in order):\n' if queue.shuffle else '\n\nCurrent queue:\n') + \
+                '\n'.join(f'  **{page_size * (page - 1) + index + 1 if index != 0 or page != 1 else "Current"}:** {song.title} - {song.artist}' for index, song in enumerate(page_queue)) + \
+                f'\n\nShowing page **{page}** of **{pagecount}**'
             )
         else: await ctx.send(f'**Shuffle:** {get_str(queue.shuffle)}\n**Repeat song:** {get_str(queue.repeat)}\n**Repeat queue:** {get_str(queue.repeatqueue)}\n\nQueue is empty')
 
@@ -129,15 +139,18 @@ class Music(commands.Cog):
     @vc()
     @commands.guild_only()
     @commands.command(
-        brief='Skips a song',
-        help='Skips the current song. If the current song is repeating, the next song will start repeating instead',
-        usage='skip'
+        brief='Skips songs',
+        help='Skips the current song. If the current song is repeating, the next song will start repeating instead. Can also skip to a specified song in the queue',
+        usage='skip *[index]'
     )
-    async def skip(self, ctx):
+    async def skip(self, ctx, index:typing.Optional[int]=None):
         queue = get_queue(ctx)
         queue.skip = True
+        if index:
+            queue.next = index
+            await ctx.send(f'Skipping to song {index} in the queue')
+        else: await ctx.send('Song skipped')
         ctx.voice_client.stop()
-        await ctx.send('Song skipped')
 
     @vc()
     @commands.guild_only()
@@ -206,7 +219,6 @@ class Music(commands.Cog):
             artist = None
         elif queue and target in ctx.voice_client.channel.members:
             title = re.sub('\[.+?\]|\(.+?\)', '', queue.song.title).strip(' ')
-            print(title)
             artist = None
         elif spotify:
             title = spotify.title

@@ -13,6 +13,7 @@ from random import randint
 from platform import system as get_os
 
 FFMPEG_OPTIONS = {'before_options': '-reconnect 1 -reconnect_streamed 1 -reconnect_delay_max 5','options': '-vn'}
+page_size = 20
 queues = {}
 guild_id = lambda ctx: ctx.guild.id if ctx.guild else None
 sp = spotipy.Spotify(client_credentials_manager=SpotifyClientCredentials(client_id='50a7e02b71c24576a259fe1e8b2df078', client_secret='dba494661d2c4812b1d158cd87f54f98'))
@@ -56,6 +57,8 @@ class Queue(list):
         self.shuffle = False
         self.repeat = False
         self.repeatqueue = False
+        self.last_played = dt.now()
+        self.next = None
 
     async def play_song(self):
         if not self.vc:
@@ -69,21 +72,30 @@ class Queue(list):
         if announce: self.loop.create_task(self.song.channel.send(f'**Now playing:** {self.song.title} - {self.song.artist}\n**Requested by:** {self.song.requestant.display_name}\n{self.song.url}'))
 
     def after(self, e):
+        self.last_played = dt.now()
         if e:
             self.loop.create_task(self.song.channel.send(f'The following error occured when attempting to play {self.song.title}: {e}'))
             self.skip = True
-        if self.repeat and not self.skip:
+        if self.skip and self.next:
+            if self.next == 1: pass
+            elif self.shuffle:
+                _song = self.pop(0)
+                self.insert(0, self.pop(self.next - 2))
+                if self.repeatqueue: self.append(_song)
+            else:
+                _songs = self[:self.next - 1]
+                del self[:self.next - 1]
+                if self.repeatqueue: self.extend(_songs)
+            self.play()
+        elif self.repeat and not self.skip:
             self.play(announce=False)
-        elif len(self) > 1:
+        elif self:
             _song = self.pop(0)
-            if self.shuffle:
+            if self.shuffle and len(self) > 1:
                 self.insert(0, self.pop(randint(0, len(self) - 1)))
             if self.repeatqueue:
                 self.append(_song)
-            self.play()
-        else:
-            del_queue(self.vc)
-            self.loop.create_task(self.vc.disconnect())
+            if self: self.play()
 
     @property
     def song(self): #Songs currently playing / about to be played
@@ -189,5 +201,4 @@ async def find_song(ctx, search):
         if response.content == 'cancel': await ctx.send('Search cancelled by user')
         else: return songs[int(response.content) - 1]
         if ctx.guild: await response.delete()
-    print((ctx.guild, bool(ctx.guild)))
     if ctx.guild: await id_list_msg.delete()
