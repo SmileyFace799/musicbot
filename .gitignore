@@ -3,4 +3,5 @@
 ffmpeg.exe
 active.txt
 *.html
-*.cache
+.cache
+playlists.json
