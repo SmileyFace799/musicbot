@@ -2377,6 +2377,182 @@
         "title": "Don't Waste Your Breath",
         "artist": "Close To Home - Topic"
       }
+    ],
+    "poop": [
+      {
+        "class": "Song",
+        "id": "7zQoFaoYTzg",
+        "title": "Arne g\u00e5r mot d\u00f8ra",
+        "artist": "Tephra"
+      },
+      {
+        "class": "Song",
+        "id": "F4dGW0jHbuo",
+        "title": "Fattern - Badekaret Til Pelle",
+        "artist": "Spammah101"
+      },
+      {
+        "class": "Song",
+        "id": "MkqG5UEnGJw",
+        "title": "Intro",
+        "artist": "Asking Alexandria"
+      },
+      {
+        "class": "Song",
+        "id": "k_INM6EUjBI",
+        "title": "Asking Alexandria - Alone Again (Official Lyric Video)",
+        "artist": "Asking Alexandria"
+      },
+      {
+        "class": "Song",
+        "id": "td0RozJ7qjA",
+        "title": "Faded Out",
+        "artist": "Asking Alexandria"
+      },
+      {
+        "class": "Song",
+        "id": "FFJS-wQefLY",
+        "title": "If I Could Erase It",
+        "artist": "Asking Alexandria"
+      },
+      {
+        "class": "Song",
+        "id": "iBmILadvV6Y",
+        "title": "Find Myself",
+        "artist": "Asking Alexandria"
+      },
+      {
+        "class": "Song",
+        "id": "LMEeiGg-xoE",
+        "title": "You've Made It This Far",
+        "artist": "Asking Alexandria"
+      },
+      {
+        "class": "Song",
+        "id": "bZnttE-0Ozw",
+        "title": "See What's On The Inside",
+        "artist": "Asking Alexandria"
+      },
+      {
+        "class": "Song",
+        "id": "wwwPQnkpXsI",
+        "title": "Misery Loves Company",
+        "artist": "Asking Alexandria"
+      },
+      {
+        "class": "Song",
+        "id": "Un9d-Q3j90Y",
+        "title": "Fame",
+        "artist": "Asking Alexandria"
+      },
+      {
+        "class": "Song",
+        "id": "RNzxZlvXwWI",
+        "title": "The Grey",
+        "artist": "Asking Alexandria"
+      },
+      {
+        "class": "Song",
+        "id": "V3Pp4IGPebg",
+        "title": "Dear Diary,",
+        "artist": "Bring Me The Horizon"
+      },
+      {
+        "class": "Song",
+        "id": "GbiB9BBs_qk",
+        "title": "Parasite Eve",
+        "artist": "Bring Me The Horizon"
+      },
+      {
+        "class": "Song",
+        "id": "iKhHd9ySXEw",
+        "title": "Teardrops",
+        "artist": "Bring Me The Horizon"
+      },
+      {
+        "class": "Song",
+        "id": "hgcYbaCq7BU",
+        "title": "Obey",
+        "artist": "Bring Me The Horizon"
+      },
+      {
+        "class": "Song",
+        "id": "Nbu3F-JTies",
+        "title": "Itch For The Cure (When Will We Be Free?)",
+        "artist": "Bring Me The Horizon"
+      },
+      {
+        "class": "Song",
+        "id": "INnieyJ_QPE",
+        "title": "Kingslayer",
+        "artist": "Bring Me The Horizon"
+      },
+      {
+        "class": "Song",
+        "id": "3QjcAymJtMY",
+        "title": "1x1",
+        "artist": "Bring Me The Horizon"
+      },
+      {
+        "class": "Song",
+        "id": "caYD1-uck_c",
+        "title": "Ludens",
+        "artist": "Bring Me The Horizon"
+      },
+      {
+        "class": "Song",
+        "id": "EK5P9Xc8cFM",
+        "title": "One Day The Only Butterflies Left Will Be In Your Chest As You March Towards Your Death",
+        "artist": "Bring Me The Horizon"
+      }
+    ]
+  },
+  "736651525023072278": {
+    "new_playlist_five": [
+      {
+        "class": "Song",
+        "id": "SbjKOI8VTY0",
+        "title": "Comatose",
+        "artist": "Skillet"
+      },
+      {
+        "class": "Song",
+        "id": "xFYQQPAOz7Y",
+        "title": "Lose Yourself by Eminem | Eminem",
+        "artist": "EminemMusic"
+      },
+      {
+        "class": "Song",
+        "id": "ngDJIjbAvz4",
+        "title": "American Pie",
+        "artist": "Don McLean"
+      },
+      {
+        "class": "Song",
+        "id": "uB0nvLMy2nQ",
+        "title": "Asking Alexandria - Find Myself (Official Visualizer)",
+        "artist": "Asking Alexandria"
+      },
+      {
+        "class": "Song",
+        "id": "-Fulz4ytZ54",
+        "title": "Toby Keith - I Love This Bar",
+        "artist": "Toby Keith"
+      }
+    ],
+    "uh": [
+      {
+        "class": "Song",
+        "id": "O5vuZW488DA",
+        "title": "B-Mike - Baby Don't Cut (Lyrics)",
+        "artist": "Lyric Videoz"
+      },
+      {
+        "class": "Song",
+        "id": "jcuaA-nJF_0",
+        "title": "Katy McAllister - Another Empty Bottle (Original Song)",
+        "artist": "Katy McAllister"
+      }
     ]
   }
 }

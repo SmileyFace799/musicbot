@@ -39,7 +39,14 @@ class Song:
         return self
 
     def add_source(self, opts):
-        pafy_object = pafy.new(self.id)
+        for i in range(5):
+            try: pafy_object = pafy.new(self.id)
+            except:
+                if i == 4:
+                    self.has_source = None
+                    return self
+                else: print(f'Unable to play song, trying again ({4 - i} attempts left)')
+            else: break
         audio = pafy_object.getbestaudio()
         url = audio.url
         self.source = discord.FFmpegPCMAudio(url, executable="./ffmpeg.exe", **opts) if get_os().lower().startswith('win') else discord.FFmpegPCMAudio(url, **opts)
@@ -68,6 +75,9 @@ class Queue(list):
     def play(self, announce=True):
         self.skip = False
         self.song.add_source(FFMPEG_OPTIONS)
+        if self.song.has_source == None:
+            self.loop.create_task(self.song.channel.send('Failed to play the current song, skipping...'))
+            return self.after(None)
         self.loop.create_task(self.play_song())
         if announce: self.loop.create_task(self.song.channel.send(f'**Now playing:** {self.song.title} - {self.song.artist}\n**Requested by:** {self.song.requestant.display_name}\n{self.song.url}'))
 
@@ -87,6 +97,7 @@ class Queue(list):
                 del self[:self.next - 1]
                 if self.repeatqueue: self.extend(_songs)
             self.play()
+            self.next = None
         elif self.repeat and not self.skip:
             self.play(announce=False)
         elif self:
