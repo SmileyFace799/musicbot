@@ -26,9 +26,11 @@ class Song:
         self.has_source = False
         self.id = id
         self.url = 'https://www.youtube.com/watch?v=' + id
-        if not (title and artist): html = urlopen(self.url).read().decode()
-        self.title = title if title else unescape(re.search('<title>(.*?)</title>', html).group(1)[:-10])
-        self.artist = artist if artist else unescape(re.search('<link itemprop="name" content="(.*?)">', html).group(1))
+        html = urlopen(self.url).read().decode()
+        self.title = title if title else unescape(re.search('<title>(.*?)</title>', html).group(1)[:-10]).encode('utf-8').decode('unicode-escape')
+        _fetched_artist = unescape(re.search('<link itemprop="name" content="(.*?)">', html).group(1)).encode('utf-8').decode('unicode-escape')
+        self.artist = artist if artist else _fetched_artist
+        self.topic = _fetched_artist.lower().endswith('- topic')
         if ctx: self.add_ctx(ctx)
         if source_opts: self.add_source(source_opts)
 
@@ -190,11 +192,14 @@ def search_playlist(url):
         artists = re.findall('"shortBylineText":{"runs":\[{"text":"(.*?)","navigationEndpoint":', html)
         for id, title, artist in zip(ids, titles, artists):
             yield Song(id, title, artist)
-    elif url.startswith('https://open.spotify.com/playlist/'):
+    elif url.startswith('https://open.spotify.com/playlist/') or url.startswith('https://open.spotify.com/playlist/'):
         tracks = get_playlist_tracks(url)
         for track in tracks:
             track = track['track']
-            yield next(search_songs(f'{track["name"]} {track["artists"][0]["name"]} - topic'))
+            all_songs = search_songs(f'{track["name"]} {track["artists"][0]["name"]} - topic')
+            next_song = next(all_songs)
+            topic_song = next_song if next_song.topic else next(filter(lambda song: song.topic, all_songs), None)
+            yield topic_song if topic_song else next_song
     else: raise commands.BadArgument('Please provide a playlist URL')
 
 async def find_song(ctx, search):

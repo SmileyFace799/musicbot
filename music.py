@@ -16,6 +16,7 @@ class Music(commands.Cog):
     @tasks.loop(seconds=5)
     async def queue_cleaner(self):
         now = dt.now()
+        print(now - queue.last_played)
         ids = reversed(tuple(i for i, queue in queues.items() if not queue.vc.is_playing() and (now - queue.last_played).total_seconds() > 300))
         for i in ids:
             await queues[i].vc.disconnect()
@@ -24,7 +25,7 @@ class Music(commands.Cog):
     @commands.guild_only()
     @commands.command(
         brief='Joins a voice channel',
-        help='Have the bot join a voice channel. If the bot is busy playing music elsewhere, use `mobehere` instead. This command is typically executed automatically, whenever the bot needs to',
+        help='Have the bot join a voice channel. If the bot is busy playing music elsewhere, use `movehere` instead. This command is typically executed automatically, whenever the bot needs to',
         usage='join'
     )
     async def join(self, ctx):
