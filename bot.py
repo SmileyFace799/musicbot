@@ -73,8 +73,4 @@ async def on_command_error(ctx, e):
         await ctx.send(str(e))
     raise e
 
-#bot.run('NjUxNTYzMjUxODk2OTQyNjAy.XebtkA.5Rp2Ebx5UjwZR62Eotz8r7Hvf9c') #YorthiccBot
-#bot.run('NTg1OTU1NzExMzczMjc5MjYx.XPg_yA.f_jmUmoOAftaC_sSiGhVDOaFdTY') #WeeBot
-#bot.run('NjM3MDQ1NDg2NDIyOTgyNjc2.XbIc1w.vZrfMy6MG0qxQNPe_HJfm99N8Ps') #WeeBotDev
-
 bot.run(active.token)
