@@ -1,359 +1,97 @@
 {
   "234724168183054336": {
-    "Sempiternal": [
+    "poop": [
       {
         "class": "Song",
-        "id": "H8Wx8GV1Oiw",
-        "title": "Can You Feel My Heart",
-        "artist": "Bring Me The Horizon"
-      },
-      {
-        "class": "Song",
-        "id": "Z5wxuvkn0pk",
-        "title": "The House of Wolves",
-        "artist": "Bring Me The Horizon"
-      },
-      {
-        "class": "Song",
-        "id": "t3AoCWK7aWk",
-        "title": "Empire (Let Them Sing)",
-        "artist": "Bring Me The Horizon"
-      },
-      {
-        "class": "Song",
-        "id": "1Y6MNSVNxf8",
-        "title": "Sleepwalking",
-        "artist": "Bring Me The Horizon"
-      },
-      {
-        "class": "Song",
-        "id": "FIyuLGcQwcA",
-        "title": "Go to Hell, for Heaven's Sake",
-        "artist": "Bring Me The Horizon"
-      },
-      {
-        "class": "Song",
-        "id": "VXuohkmlupA",
-        "title": "Shadow Moses",
-        "artist": "Bring Me The Horizon"
-      },
-      {
-        "class": "Song",
-        "id": "DpYqD5bDrsg",
-        "title": "And the Snakes Start to Sing",
-        "artist": "Bring Me The Horizon"
-      },
-      {
-        "class": "Song",
-        "id": "SRf-AoDEOWU",
-        "title": "Seen It All Before",
-        "artist": "Bring Me The Horizon"
-      },
-      {
-        "class": "Song",
-        "id": "uIPqND1hV3k",
-        "title": "Antivist",
-        "artist": "Bring Me The Horizon"
-      },
-      {
-        "class": "Song",
-        "id": "gA4qFTu0ui8",
-        "title": "Crooked Young",
-        "artist": "Bring Me The Horizon"
-      },
-      {
-        "class": "Song",
-        "id": "-_pj39Xeabo",
-        "title": "Hospital for Souls",
-        "artist": "Bring Me The Horizon"
-      },
-      {
-        "class": "Song",
-        "id": "vYiu5R3feZk",
-        "title": "Join the Club",
-        "artist": "Bring Me The Horizon"
-      },
-      {
-        "class": "Song",
-        "id": "YAwJto0FPIQ",
-        "title": "Deathbeds",
-        "artist": "Bring Me The Horizon"
-      }
-    ],
-    "phsh": [
-      {
-        "class": "Song",
-        "id": "V3Pp4IGPebg",
-        "title": "Dear Diary,",
-        "artist": "Bring Me The Horizon"
-      },
-      {
-        "class": "Song",
-        "id": "GbiB9BBs_qk",
-        "title": "Parasite Eve",
-        "artist": "Bring Me The Horizon"
-      },
-      {
-        "class": "Song",
-        "id": "iKhHd9ySXEw",
-        "title": "Teardrops",
-        "artist": "Bring Me The Horizon"
-      },
-      {
-        "class": "Song",
-        "id": "hgcYbaCq7BU",
-        "title": "Obey",
-        "artist": "Bring Me The Horizon"
-      },
-      {
-        "class": "Song",
-        "id": "Nbu3F-JTies",
-        "title": "Itch For The Cure (When Will We Be Free?)",
-        "artist": "Bring Me The Horizon"
-      },
-      {
-        "class": "Song",
-        "id": "INnieyJ_QPE",
-        "title": "Kingslayer",
-        "artist": "Bring Me The Horizon"
-      },
-      {
-        "class": "Song",
-        "id": "3QjcAymJtMY",
-        "title": "1x1",
-        "artist": "Bring Me The Horizon"
-      },
-      {
-        "class": "Song",
-        "id": "caYD1-uck_c",
-        "title": "Ludens",
-        "artist": "Bring Me The Horizon"
-      },
-      {
-        "class": "Song",
-        "id": "EK5P9Xc8cFM",
-        "title": "One Day The Only Butterflies Left Will Be In Your Chest As You March Towards Your Death",
-        "artist": "Bring Me The Horizon"
-      }
-    ],
-    "bmth": [
-      {
-        "class": "Song",
-        "id": "H8Wx8GV1Oiw",
-        "title": "Can You Feel My Heart",
-        "artist": "Bring Me The Horizon"
-      },
-      {
-        "class": "Song",
-        "id": "Z5wxuvkn0pk",
-        "title": "The House of Wolves",
-        "artist": "Bring Me The Horizon"
-      },
-      {
-        "class": "Song",
-        "id": "t3AoCWK7aWk",
-        "title": "Empire (Let Them Sing)",
-        "artist": "Bring Me The Horizon"
-      },
-      {
-        "class": "Song",
-        "id": "1Y6MNSVNxf8",
-        "title": "Sleepwalking",
-        "artist": "Bring Me The Horizon"
-      },
-      {
-        "class": "Song",
-        "id": "FIyuLGcQwcA",
-        "title": "Go to Hell, for Heaven's Sake",
-        "artist": "Bring Me The Horizon"
-      },
-      {
-        "class": "Song",
-        "id": "VXuohkmlupA",
-        "title": "Shadow Moses",
-        "artist": "Bring Me The Horizon"
-      },
-      {
-        "class": "Song",
-        "id": "DpYqD5bDrsg",
-        "title": "And the Snakes Start to Sing",
-        "artist": "Bring Me The Horizon"
-      },
-      {
-        "class": "Song",
-        "id": "SRf-AoDEOWU",
-        "title": "Seen It All Before",
-        "artist": "Bring Me The Horizon"
-      },
-      {
-        "class": "Song",
-        "id": "uIPqND1hV3k",
-        "title": "Antivist",
-        "artist": "Bring Me The Horizon"
-      },
-      {
-        "class": "Song",
-        "id": "gA4qFTu0ui8",
-        "title": "Crooked Young",
-        "artist": "Bring Me The Horizon"
-      },
-      {
-        "class": "Song",
-        "id": "-_pj39Xeabo",
-        "title": "Hospital for Souls",
-        "artist": "Bring Me The Horizon"
-      },
-      {
-        "class": "Song",
-        "id": "vYiu5R3feZk",
-        "title": "Join the Club",
-        "artist": "Bring Me The Horizon"
-      },
-      {
-        "class": "Song",
-        "id": "YAwJto0FPIQ",
-        "title": "Deathbeds",
-        "artist": "Bring Me The Horizon"
-      },
-      {
-        "class": "Song",
-        "id": "V3Pp4IGPebg",
-        "title": "Dear Diary,",
-        "artist": "Bring Me The Horizon"
-      },
-      {
-        "class": "Song",
-        "id": "GbiB9BBs_qk",
-        "title": "Parasite Eve",
-        "artist": "Bring Me The Horizon"
-      },
-      {
-        "class": "Song",
-        "id": "iKhHd9ySXEw",
-        "title": "Teardrops",
-        "artist": "Bring Me The Horizon"
-      },
-      {
-        "class": "Song",
-        "id": "hgcYbaCq7BU",
-        "title": "Obey",
-        "artist": "Bring Me The Horizon"
-      },
-      {
-        "class": "Song",
-        "id": "Nbu3F-JTies",
-        "title": "Itch For The Cure (When Will We Be Free?)",
-        "artist": "Bring Me The Horizon"
-      },
-      {
-        "class": "Song",
-        "id": "INnieyJ_QPE",
-        "title": "Kingslayer",
-        "artist": "Bring Me The Horizon"
-      },
-      {
-        "class": "Song",
-        "id": "3QjcAymJtMY",
-        "title": "1x1",
-        "artist": "Bring Me The Horizon"
-      },
-      {
-        "class": "Song",
-        "id": "caYD1-uck_c",
-        "title": "Ludens",
-        "artist": "Bring Me The Horizon"
-      },
-      {
-        "class": "Song",
-        "id": "EK5P9Xc8cFM",
-        "title": "One Day The Only Butterflies Left Will Be In Your Chest As You March Towards Your Death",
-        "artist": "Bring Me The Horizon"
+        "id": "pDzDDAoaSOM",
+        "title": "Take Your Pick",
+        "artist": "Ice Nine Kills"
       }
     ],
     "gaming": [
       {
         "class": "Song",
-        "id": "Q3gy8A0jY10",
-        "title": "Linkin Park - In The End (Audio)",
-        "artist": "YOUMUSIC"
+        "id": "BLZWkjBXfN8",
+        "title": "In the End",
+        "artist": "Linkin Park"
       },
       {
         "class": "Song",
-        "id": "PiihIwhjIvQ",
+        "id": "j2R6uT7uLFg",
         "title": "Last Resort",
         "artist": "Papa Roach"
       },
       {
         "class": "Song",
-        "id": "Ci_h4nJRga0",
-        "title": "The Diary Of Jane",
+        "id": "pcAKbKUBUOQ",
+        "title": "The Diary of Jane",
         "artist": "Breaking Benjamin"
       },
       {
         "class": "Song",
-        "id": "_bLx5XlXJQI",
-        "title": "Rise Against- Savior (audio)",
-        "artist": "SuperRad801"
+        "id": "vbMh38KGZMM",
+        "title": "Savior",
+        "artist": "RiseAgainst"
       },
       {
         "class": "Song",
-        "id": "gr7fPGNLGJg",
-        "title": "Three Days Grace Animal I Have Become (HQ HD Audio)",
-        "artist": "CARELO160488"
+        "id": "ysho2xTWUYo",
+        "title": "Animal I Have Become",
+        "artist": "Three Days Grace"
       },
       {
         "class": "Song",
-        "id": "OHDEnpnhS-4",
-        "title": "Rise Against - Prayer of the Refugee",
-        "artist": "avocadoes"
+        "id": "I2iR5JYOPPo",
+        "title": "Prayer Of The Refugee",
+        "artist": "RiseAgainst"
       },
       {
         "class": "Song",
-        "id": "O__jrH6MNFc",
+        "id": "XkEb1vj6ssY",
         "title": "Tears Don't Fall",
         "artist": "Bullet For My Valentine"
       },
       {
         "class": "Song",
-        "id": "vZ7nTHxWyOk",
-        "title": "Linkin Park - Crawling (Audio)",
-        "artist": "YOUMUSIC"
+        "id": "I6NU3kWqnDE",
+        "title": "Crawling",
+        "artist": "Linkin Park"
       },
       {
         "class": "Song",
-        "id": "3GWwohI5h1w",
-        "title": "Slipknot - Duality HQ",
-        "artist": "See OttoHQAudio"
+        "id": "B2lmOei7qfk",
+        "title": "Duality",
+        "artist": "Slipknot"
       },
       {
         "class": "Song",
-        "id": "5bIDvc_6XGc",
-        "title": "Skillet - Hero [HQ]",
-        "artist": "Christianmuzikz"
+        "id": "EDNZ2zubuKg",
+        "title": "Hero",
+        "artist": "Skillet"
       },
       {
         "class": "Song",
-        "id": "-fMsl4QZIz0",
-        "title": "Miss Murder AFI HD",
-        "artist": "FallenDemonRYUK"
+        "id": "aviGAyS9TGs",
+        "title": "Miss Murder",
+        "artist": "AFI AFIREINSIDE"
       },
       {
         "class": "Song",
-        "id": "yuXq2f2enPs",
-        "title": "Numb - Linkin Park (Audio)",
-        "artist": "Music Topic BR"
+        "id": "u-IcadiJCrE",
+        "title": "Numb",
+        "artist": "Linkin Park"
       },
       {
         "class": "Song",
-        "id": "gqbQuypKCCU",
-        "title": "Three Days Grace - I Hate Everything About You (HD)",
-        "artist": "MultiMediam"
+        "id": "ph9KP2_lT5Q",
+        "title": "I Hate Everything About You",
+        "artist": "Three Days Grace"
       },
       {
         "class": "Song",
-        "id": "XncMCAf8fp8",
-        "title": "Linkin Park - Faint (Audio)",
-        "artist": "YOUMUSIC"
+        "id": "yOW7Eh81Gto",
+        "title": "Faint",
+        "artist": "Linkin Park"
       },
       {
         "class": "Song",
@@ -363,7 +101,7 @@
       },
       {
         "class": "Song",
-        "id": "05wXNKzOkRM",
+        "id": "drp5LyCrKyU",
         "title": "Time of Dying",
         "artist": "Three Days Grace"
       },
@@ -375,57 +113,57 @@
       },
       {
         "class": "Song",
-        "id": "NVh0GSxGoj8",
-        "title": "Skillet - Monster (Alternate Radio Version)",
-        "artist": "Pfour hehe"
-      },
-      {
-        "class": "Song",
-        "id": "9VamaHv-xyo",
-        "title": "Skillet - Out Of Hell [Official Audio]",
+        "id": "pzSfqgcghyQ",
+        "title": "Monster (Alternate Radio Version)",
         "artist": "Skillet"
       },
       {
         "class": "Song",
-        "id": "vCWmHbpD0fE",
-        "title": "Skillet - The Resistance [Official Audio]",
+        "id": "cFmh1GrDxxo",
+        "title": "Out of Hell",
         "artist": "Skillet"
       },
       {
         "class": "Song",
-        "id": "14xAEMMIF-8",
-        "title": "Skillet - Set It Off [Official Audio]",
+        "id": "cGvJbijeYSM",
+        "title": "The Resistance",
         "artist": "Skillet"
       },
       {
         "class": "Song",
-        "id": "ZeoCYy98piM",
-        "title": "Rise Against - Satellite NEW ALBUM HQ",
-        "artist": "Marcello Barreto"
+        "id": "rhWshpqujxI",
+        "title": "Set It Off",
+        "artist": "Skillet"
       },
       {
         "class": "Song",
-        "id": "mq5sVSoD9Yw",
-        "title": "Disturbed - Stricken",
-        "artist": "M3TALdudeM4N"
+        "id": "KCffKIZV82w",
+        "title": "Satellite",
+        "artist": "RiseAgainst"
       },
       {
         "class": "Song",
-        "id": "Ax_rumGgfQs",
-        "title": "Skillet - Not Gonna Die [HQ]",
-        "artist": "Nahuel Chiffel"
+        "id": "VVLAnjtpXeM",
+        "title": "Stricken",
+        "artist": "Disturbed"
       },
       {
         "class": "Song",
-        "id": "U8ai37gFvMk",
-        "title": "Three Days Grace - Painkiller (Audio)",
+        "id": "zgHhrzJQAvE",
+        "title": "Not Gonna Die",
+        "artist": "Skillet"
+      },
+      {
+        "class": "Song",
+        "id": "zTGOw4kr3OM",
+        "title": "Painkiller",
         "artist": "Three Days Grace"
       },
       {
         "class": "Song",
-        "id": "ZRG5oOL5WO0",
-        "title": "Skillet - Whispers In The Dark [HQ]",
-        "artist": "Christianmuzikz"
+        "id": "chrPjWPG-nk",
+        "title": "Whispers in the Dark",
+        "artist": "Skillet"
       },
       {
         "class": "Song",
@@ -447,27 +185,27 @@
       },
       {
         "class": "Song",
-        "id": "fBn--U3bPsY",
+        "id": "Stb1zlaOZO8",
         "title": "Happy Song",
         "artist": "Bring Me The Horizon"
       },
       {
         "class": "Song",
-        "id": "XEp3GTVuShw",
-        "title": "Bring Me The Horizon- Throne (Audio)",
-        "artist": "Rock Metal Electronic Music"
+        "id": "aJjvKCtivak",
+        "title": "Throne",
+        "artist": "Bring Me The Horizon"
       },
       {
         "class": "Song",
-        "id": "OYVuP760O68",
-        "title": "Bring Me The Horizon - True Friends (Audio)",
-        "artist": "Kerry Von Vanity Star"
+        "id": "kan6EZaBBHI",
+        "title": "True Friends",
+        "artist": "Bring Me The Horizon"
       },
       {
         "class": "Song",
-        "id": "u_3eo1U7zEw",
-        "title": "Bring Me The Horizon - Follow You  (Audio)",
-        "artist": "Red Devil"
+        "id": "RqQKhSzThyc",
+        "title": "Follow You",
+        "artist": "Bring Me The Horizon"
       },
       {
         "class": "Song",
@@ -477,9 +215,9 @@
       },
       {
         "class": "Song",
-        "id": "JdqR1MBcuGM",
-        "title": "Bring Me The Horizon - Avalanche Lyrics [HQ]",
-        "artist": "imnotugly"
+        "id": "33hVOJdVw8E",
+        "title": "Avalanche",
+        "artist": "Bring Me The Horizon"
       },
       {
         "class": "Song",
@@ -501,33 +239,33 @@
       },
       {
         "class": "Song",
-        "id": "TdaKhqnXLQ0",
-        "title": "Oh No (Radio Edit)",
+        "id": "Q84ICFxQQl0",
+        "title": "Oh No",
         "artist": "Bring Me The Horizon"
       },
       {
         "class": "Song",
-        "id": "z5piKnXdR4Q",
-        "title": "Get Scared - Cynical Skin (with lyrics in description)",
+        "id": "riwIBR5VPmY",
+        "title": "Cynical Skin",
         "artist": "Get Scared"
       },
       {
         "class": "Song",
-        "id": "k8UXCyeyL0A",
-        "title": "Get Scared - Problematic [HD]",
-        "artist": "MontageRock"
+        "id": "Zak6suBrmug",
+        "title": "Problematic",
+        "artist": "Get Scared"
       },
       {
         "class": "Song",
-        "id": "mtwnzNshyDI",
-        "title": "[XRW Music:] Pix Black - \\\"Built For Blame\\\" Official Theme",
-        "artist": "Pheno Styles"
+        "id": "jxy10uq0bm4",
+        "title": "Built for Blame",
+        "artist": "Get Scared"
       },
       {
         "class": "Song",
-        "id": "Uy9YjdnRQAA",
-        "title": "Are You Afraid Of The Dark Extended Ending Theme",
-        "artist": "NostalgicTv"
+        "id": "wnzqW_dqGNc",
+        "title": "Fear of Past",
+        "artist": "Various Artists - Topic"
       },
       {
         "class": "Song",
@@ -585,13 +323,13 @@
       },
       {
         "class": "Song",
-        "id": "zHC65OJlLho",
-        "title": "Black Veil Brides - In The End (Official Audio)",
-        "artist": "Rock Land"
+        "id": "oIdVZa7xmo4",
+        "title": "In The End",
+        "artist": "Black Veil Brides"
       },
       {
         "class": "Song",
-        "id": "5G5BnlBuozU",
+        "id": "jLKOBJR5vHs",
         "title": "Teenagers",
         "artist": "My Chemical Romance"
       },
@@ -603,7 +341,7 @@
       },
       {
         "class": "Song",
-        "id": "G-I9csAflBs",
+        "id": "v_uncMEJkBc",
         "title": "Welcome to the Black Parade",
         "artist": "My Chemical Romance"
       },
@@ -615,9 +353,9 @@
       },
       {
         "class": "Song",
-        "id": "w5ejci4y7vo",
-        "title": "Pierce The Veil - King For A Day (Feat. Kellin Quinn) [Audio]",
-        "artist": "Snow Kaiser"
+        "id": "8SvJXSyPNXs",
+        "title": "King For A Day",
+        "artist": "Pierce The Veil"
       },
       {
         "class": "Song",
@@ -639,26 +377,26 @@
       },
       {
         "class": "Song",
-        "id": "CkaWjVD6FKQ",
-        "title": "Black Veil Brides - Heart of Fire (Audio Stream)",
+        "id": "NIWtAe5nZkE",
+        "title": "Heart Of Fire",
         "artist": "Black Veil Brides"
       },
       {
         "class": "Song",
-        "id": "mBraX5QNfIc",
-        "title": "Bullet For My Valentine - You Want a Battle? (Here's a War) (Audio)",
+        "id": "VhF-wmk_7gU",
+        "title": "You Want a Battle? (Here's a War)",
         "artist": "Bullet For My Valentine"
       },
       {
         "class": "Song",
-        "id": "Q3wBvqKZA68",
-        "title": "Setting Yourself Up For Sarcasm",
+        "id": "G2g3zfHqW4Q",
+        "title": "Sarcasm",
         "artist": "Get Scared"
       },
       {
         "class": "Song",
-        "id": "xxIsmbVZuSI",
-        "title": "Escape the Fate - \\\"One For The Money\\\"",
+        "id": "VCkFmU-35SE",
+        "title": "One For the Money",
         "artist": "Escape the Fate"
       },
       {
@@ -669,33 +407,33 @@
       },
       {
         "class": "Song",
-        "id": "eRqIbk9VDwo",
-        "title": "You're Going Down By Sick Puppies Explicit",
-        "artist": "Mocking Burgh Studios"
+        "id": "8BW5sixk-gU",
+        "title": "You're Going Down",
+        "artist": "Sick Puppies"
       },
       {
         "class": "Song",
-        "id": "QVqYjvMVSWY",
-        "title": "Bring Me The Horizon - Go To Hell, For Heaven's Sake (Official Audio)",
+        "id": "FIyuLGcQwcA",
+        "title": "Go to Hell, for Heaven's Sake",
         "artist": "Bring Me The Horizon"
       },
       {
         "class": "Song",
-        "id": "4y_InZASsEo",
-        "title": "Three Days Grace - I Am Machine (Audio)",
-        "artist": "Ozan T\u00fcrko\u011flu"
+        "id": "iL9yYc68MY8",
+        "title": "I Am Machine",
+        "artist": "Three Days Grace"
       },
       {
         "class": "Song",
-        "id": "AFH75qm7kJA",
-        "title": "At Least Give Me My Dreams Back You Negligent Whore",
+        "id": "Yydcjm8i1y0",
+        "title": "At Least Give Me My Dreams Back, You Negligent Whore!",
         "artist": "ADEPT"
       },
       {
         "class": "Song",
-        "id": "qgGQaEdkkTU",
-        "title": "Tonight Alive - Lonely Girl (Audio)",
-        "artist": "pumpkin queen"
+        "id": "rSITrt329yQ",
+        "title": "Lonely Girl",
+        "artist": "Tonight Alive"
       },
       {
         "class": "Song",
@@ -711,9 +449,9 @@
       },
       {
         "class": "Song",
-        "id": "e_3VJBGHdY0",
-        "title": "Escape The Fate - Issues (HD)",
-        "artist": "Kenne Bullet"
+        "id": "DUTXKq6jnhw",
+        "title": "Issues",
+        "artist": "Escape the Fate"
       },
       {
         "class": "Song",
@@ -741,14 +479,14 @@
       },
       {
         "class": "Song",
-        "id": "rL4bls79Ohs",
+        "id": "zLz9bwDYunM",
         "title": "Circus for a Psycho",
         "artist": "Skillet"
       },
       {
         "class": "Song",
-        "id": "F0vmjT-00DU",
-        "title": "Ice Nine Kills - Someone Like You (Official Music Video) [Adele Cover]",
+        "id": "KKhiKO7HRRQ",
+        "title": "Someone Like You",
         "artist": "Ice Nine Kills"
       },
       {
@@ -759,8 +497,8 @@
       },
       {
         "class": "Song",
-        "id": "c0SrxSMHDmE",
-        "title": "Bullet For My Valentine - Hand Of Blood",
+        "id": "VvhwftHKgtQ",
+        "title": "Hand Of Blood",
         "artist": "Bullet For My Valentine"
       },
       {
@@ -777,9 +515,9 @@
       },
       {
         "class": "Song",
-        "id": "IW6TxK5HNNg",
-        "title": "Of Mice \\u0026 Men - Would You Still Be There (Official Music Video)",
-        "artist": "riserecords"
+        "id": "SqQC_bq3l1o",
+        "title": "Would You Still Be There",
+        "artist": "Of Mice \\u0026 Men"
       },
       {
         "class": "Song",
@@ -807,20 +545,20 @@
       },
       {
         "class": "Song",
-        "id": "8IyofPtQbSE",
-        "title": "To Be Loved - Papa Roach (with lyrics)",
-        "artist": "liamuzumaki"
+        "id": "xMRfvAvcBnA",
+        "title": "... To Be Loved",
+        "artist": "Papa Roach"
       },
       {
         "class": "Song",
-        "id": "b1RKaRgVFKk",
-        "title": "ASKING ALEXANDRIA - The Black (Official Music Video)",
-        "artist": "Sumerian Records"
+        "id": "vl0dl8hIpsk",
+        "title": "The Black",
+        "artist": "Asking Alexandria"
       },
       {
         "class": "Song",
-        "id": "WumCI56iYUk",
-        "title": "Pierce The Veil - Bulls in the Bronx",
+        "id": "MBECq3GRnY4",
+        "title": "Bulls In The Bronx",
         "artist": "Pierce The Veil"
       },
       {
@@ -831,45 +569,45 @@
       },
       {
         "class": "Song",
-        "id": "O-1Q25kb-2w",
-        "title": "Disturbed - Warrior [Official Audio]",
+        "id": "kWdy2XFZvKM",
+        "title": "Warrior",
         "artist": "Disturbed"
       },
       {
         "class": "Song",
-        "id": "_wcQP2tGzu0",
-        "title": "Disturbed - Ten Thousand Fists [Official Audio]",
+        "id": "OuK4OcMUGcg",
+        "title": "Ten Thousand Fists",
         "artist": "Disturbed"
       },
       {
         "class": "Song",
-        "id": "RePmnl5ulEg",
-        "title": "Hell Above - Pierce The Veil (Audio)",
-        "artist": "Harriet Lewis"
+        "id": "MyWFGvR2Gsg",
+        "title": "Hell Above",
+        "artist": "Pierce The Veil"
       },
       {
         "class": "Song",
-        "id": "Q-QhBfDnyNY",
-        "title": "Thousand Foot Krutch: War of Change (Official Audio)",
+        "id": "8onXlXfbOXs",
+        "title": "War of Change",
         "artist": "Thousand Foot Krutch"
       },
       {
         "class": "Song",
-        "id": "qLfttuK8VkI",
+        "id": "gMF5L19od1Q",
         "title": "Again",
         "artist": "Flyleaf - Topic"
       },
       {
         "class": "Song",
-        "id": "jSD5vSSGLOM",
-        "title": "Thousand Foot Krutch: Untraveled Road (Official Audio)",
+        "id": "U-qHso25AVE",
+        "title": "Untraveled Road",
         "artist": "Thousand Foot Krutch"
       },
       {
         "class": "Song",
-        "id": "ZHz2Fln_ToI",
-        "title": "Chunk! No, Captain Chunk! - The Other Line (Official Music Video)",
-        "artist": "Fearless Records"
+        "id": "YwcnJi-DzS0",
+        "title": "The Other Line",
+        "artist": "chunknocaptainchunk"
       },
       {
         "class": "Song",
@@ -879,27 +617,27 @@
       },
       {
         "class": "Song",
-        "id": "Auuqlcom6tM",
-        "title": "Disturbed - Immortalized [Official Lyrics Video]",
+        "id": "4C0uBn4rj0I",
+        "title": "Immortalized",
         "artist": "Disturbed"
       },
       {
         "class": "Song",
-        "id": "C_KZvUnB5nM",
-        "title": "Punk Goes Pop Vol. 6 - Ice Nine Kills \\\"Animals\\\" (Originally performed by Maroon 5)",
-        "artist": "Fearless Records"
+        "id": "UnDjQ-qtgYU",
+        "title": "Animals",
+        "artist": "Ice Nine Kills"
       },
       {
         "class": "Song",
-        "id": "KCqjZIGKR0M",
-        "title": "Egypt Central - White Rabbit [HD/HQ]",
-        "artist": "Angstskater"
+        "id": "dO1CCVnBo0o",
+        "title": "White Rabbit",
+        "artist": "Egypt Central"
       },
       {
         "class": "Song",
-        "id": "-GKO4DpyJd8",
-        "title": "Issues - Sad Ghost",
-        "artist": "riserecords"
+        "id": "Jk7EAeSuLsw",
+        "title": "Sad Ghost",
+        "artist": "ISSUES"
       },
       {
         "class": "Song",
@@ -915,9 +653,9 @@
       },
       {
         "class": "Song",
-        "id": "4S-ODexQkFo",
-        "title": "Pierce The Veil - One Hundred Sleepless Nights (Track 10)",
-        "artist": "Fearless Records"
+        "id": "GBuC8mx6TDg",
+        "title": "One Hundred Sleepless Nights",
+        "artist": "Pierce The Veil"
       },
       {
         "class": "Song",
@@ -927,15 +665,15 @@
       },
       {
         "class": "Song",
-        "id": "pPJJ9jxe77w",
-        "title": "Communion Of The Cursed",
+        "id": "y6dr3DsWOoM",
+        "title": "Communion of the Cursed",
         "artist": "Ice Nine Kills"
       },
       {
         "class": "Song",
-        "id": "2N2cHRSDkVg",
-        "title": "Ice Nine Kills - Bloodbath \\u0026 Beyond (Lyric Video)",
-        "artist": "Fearless Records"
+        "id": "38wwQTtONi0",
+        "title": "Bloodbath \\u0026 Beyond",
+        "artist": "Ice Nine Kills"
       },
       {
         "class": "Song",
@@ -945,13 +683,13 @@
       },
       {
         "class": "Song",
-        "id": "7j2wOCz-Iik",
-        "title": "Ice Nine Kills - Star-Crossed Enemies",
-        "artist": "Fearless Records"
+        "id": "1YdpsmDD5sg",
+        "title": "Star-Crossed Enemies",
+        "artist": "Ice Nine Kills"
       },
       {
         "class": "Song",
-        "id": "QJxMcQXVCl0",
+        "id": "goPBqXGbF0I",
         "title": "Me, Myself \\u0026 Hyde",
         "artist": "Ice Nine Kills"
       },
@@ -963,9 +701,9 @@
       },
       {
         "class": "Song",
-        "id": "oQ1oWHHAeH0",
-        "title": "Ice Nine Kills - The People In The Attic",
-        "artist": "Fearless Records"
+        "id": "h2BzvZ1zJpM",
+        "title": "The People In The Attic",
+        "artist": "Ice Nine Kills"
       },
       {
         "class": "Song",
@@ -975,7 +713,7 @@
       },
       {
         "class": "Song",
-        "id": "4QU89tYNKi0",
+        "id": "PVMyHCdeswY",
         "title": "The Power In Belief",
         "artist": "Ice Nine Kills"
       },
@@ -999,9 +737,9 @@
       },
       {
         "class": "Song",
-        "id": "UzPFUVII55M",
-        "title": "Ice Nine Kills - The Product Of Hate",
-        "artist": "Outerloop Group"
+        "id": "7bIgZrC6h4w",
+        "title": "The Product Of Hate",
+        "artist": "Ice Nine Kills"
       },
       {
         "class": "Song",
@@ -1035,21 +773,21 @@
       },
       {
         "class": "Song",
-        "id": "yqEKswonXdc",
-        "title": "Ice Nine Kills - My Life In Two",
-        "artist": "Outerloop Group"
+        "id": "kt9wyTfv9AM",
+        "title": "My Life In Two",
+        "artist": "Ice Nine Kills"
       },
       {
         "class": "Song",
-        "id": "JXq2TBAuL8o",
-        "title": "Ice Nine Kills - The American Nightmare (Official Music Video)",
-        "artist": "Fearless Records"
+        "id": "wPO8Yhx0Mnk",
+        "title": "The American Nightmare",
+        "artist": "Ice Nine Kills"
       },
       {
         "class": "Song",
-        "id": "5VBbS1e3LYI",
-        "title": "Ice Nine Kills - Thank God It's Friday (Official Music Video)",
-        "artist": "Fearless Records"
+        "id": "YGBkaIDQB74",
+        "title": "Thank God It's Friday",
+        "artist": "Ice Nine Kills"
       },
       {
         "class": "Song",
@@ -1077,9 +815,9 @@
       },
       {
         "class": "Song",
-        "id": "MuH7w_j7dEw",
-        "title": "Ice Nine Kills - Rocking The Boat (feat. Jeremy Schwartz)",
-        "artist": "Fearless Records"
+        "id": "MfJxrsNfWZo",
+        "title": "Rocking The Boat",
+        "artist": "Ice Nine Kills"
       },
       {
         "class": "Song",
@@ -1095,9 +833,9 @@
       },
       {
         "class": "Song",
-        "id": "x2Pld4hBIig",
-        "title": "Ice Nine Kills - The World In My Hands (feat. Tony Lovato of Mest)",
-        "artist": "Fearless Records"
+        "id": "RPDnSkmz2Pc",
+        "title": "The World In My Hands (ft. Tony Lovato of Mest)",
+        "artist": "Ice Nine Kills"
       },
       {
         "class": "Song",
@@ -1119,9 +857,9 @@
       },
       {
         "class": "Song",
-        "id": "AX1eXAkkFbQ",
-        "title": "Falling In Reverse \u25ba Raised By Wolves [HQ]",
-        "artist": "FlooFlooFratelli"
+        "id": "gKtschtdlj0",
+        "title": "Raised By Wolves",
+        "artist": "Falling In Reverse"
       },
       {
         "class": "Song",
@@ -1131,9 +869,9 @@
       },
       {
         "class": "Song",
-        "id": "lb1MJ4_QVrk",
-        "title": "Falling In Reverse - The Drug In Me Is You (HD)",
-        "artist": "AlexMau5"
+        "id": "_CNipqLpmpU",
+        "title": "The Drug In Me Is You",
+        "artist": "Falling In Reverse"
       },
       {
         "class": "Song",
@@ -1167,14 +905,14 @@
       },
       {
         "class": "Song",
-        "id": "4_GJno0U9kM",
-        "title": "Disturbed - Are You Ready",
-        "artist": "That One Album Uploader"
+        "id": "N5U8O81jtAg",
+        "title": "Are You Ready",
+        "artist": "Disturbed"
       },
       {
         "class": "Song",
-        "id": "eQji1bEXwc0",
-        "title": "Disturbed - No More [Official Lyrics Video]",
+        "id": "6tsW4ik73ac",
+        "title": "No More",
         "artist": "Disturbed"
       },
       {
@@ -1185,15 +923,15 @@
       },
       {
         "class": "Song",
-        "id": "KSGTo_laeCs",
-        "title": "Disturbed - Stronger On Your Own [Official Lyrics Video]",
+        "id": "QxgEhm8DiK0",
+        "title": "Stronger on Your Own",
         "artist": "Disturbed"
       },
       {
         "class": "Song",
-        "id": "dLBXSxHTXfY",
-        "title": "Disturbed - The Best Ones Lie [1 Hour]",
-        "artist": "Predaking-117"
+        "id": "kv6ev6zsukc",
+        "title": "The Best Ones Lie",
+        "artist": "Disturbed"
       },
       {
         "class": "Song",
@@ -1203,9 +941,9 @@
       },
       {
         "class": "Song",
-        "id": "ma868m6DZVE",
-        "title": "Bring Me The Horizon - wonderful life ft. Dani Filth (Official Audio)",
-        "artist": "The Warrior Slayer"
+        "id": "swARY8OeDAg",
+        "title": "wonderful life",
+        "artist": "Bring Me The Horizon"
       },
       {
         "class": "Song",
@@ -1215,38 +953,38 @@
       },
       {
         "class": "Song",
-        "id": "iYcbfc_UB6M",
+        "id": "LIxIfBzL4v8",
         "title": "Bodies",
         "artist": "Drowning Pool"
       },
       {
         "class": "Song",
-        "id": "oL64efV-YlQ",
-        "title": "Skillet - Feel Invincible (Audio) [HQ] New Single",
-        "artist": "FIVE1 Gaming"
-      },
-      {
-        "class": "Song",
-        "id": "W44HrKFTPaE",
-        "title": "Skillet -  Back From The Dead [Official Audio]",
+        "id": "0m7puo2uBzA",
+        "title": "Feel Invincible",
         "artist": "Skillet"
       },
       {
         "class": "Song",
-        "id": "b3jQ0tFqG_0",
-        "title": "Skillet - \\\"Rise\\\" lyric video",
+        "id": "dGawgRPqr5Q",
+        "title": "Back From the Dead",
         "artist": "Skillet"
       },
       {
         "class": "Song",
-        "id": "qSeiG6qMhaI",
-        "title": "Of Mice \\u0026 Men - Second and Sebring (Official Music Video)",
-        "artist": "riserecords"
+        "id": "5D4UDnLIsQU",
+        "title": "Rise",
+        "artist": "Skillet"
       },
       {
         "class": "Song",
-        "id": "2Ye9sG0Nmhw",
-        "title": "Help (Remastered 2020)",
+        "id": "8cfxrmPUfmE",
+        "title": "Second \\u0026 Sebring",
+        "artist": "Of Mice \\u0026 Men"
+      },
+      {
+        "class": "Song",
+        "id": "amXuPv7TSPk",
+        "title": "Help",
         "artist": "Papa Roach"
       },
       {
@@ -1257,8 +995,8 @@
       },
       {
         "class": "Song",
-        "id": "xRswdqzx1kA",
-        "title": "Hatri\u00f0 Mun Sigra (Xtended)",
+        "id": "Lo-rIkEOrfQ",
+        "title": "Hatri\u00f0 mun sigra",
         "artist": "Hatari - Topic"
       },
       {
@@ -1275,14 +1013,14 @@
       },
       {
         "class": "Song",
-        "id": "jZzYOQvKcXw",
-        "title": "Black Veil Brides - When They Call My Name (Audio)",
+        "id": "La3JpRW372g",
+        "title": "When They Call My Name",
         "artist": "Black Veil Brides"
       },
       {
         "class": "Song",
-        "id": "hRIj2IJwQbI",
-        "title": "Black Veil Brides - The Outsider (Audio)",
+        "id": "wU5TIWquvEU",
+        "title": "The Outsider",
         "artist": "Black Veil Brides"
       },
       {
@@ -1305,14 +1043,14 @@
       },
       {
         "class": "Song",
-        "id": "G8fOInE9dys",
-        "title": "For The Glory (feat. Hollywood Undead)",
+        "id": "v7TqSkQwKSs",
+        "title": "For the Glory",
         "artist": "All Good Things"
       },
       {
         "class": "Song",
-        "id": "CP3Jq3bqBnw",
-        "title": "GYZE - HONESTY feat. Ettore Rigotti [OFFICIAL LYRICS VIDEO]",
+        "id": "7qBO1hYJ2p4",
+        "title": "Honesty",
         "artist": "GYZE"
       },
       {
@@ -1335,27 +1073,27 @@
       },
       {
         "class": "Song",
-        "id": "dItEoJ6fiIs",
-        "title": "SKILLET - Whispers in the Dark (Metal Cover) by Caleb Hyles and Jonathan Young",
-        "artist": "Caleb Hyles"
+        "id": "XmeDNbsB_D0",
+        "title": "Whispers in the Dark",
+        "artist": "Caleb Hyles - Topic"
       },
       {
         "class": "Song",
-        "id": "4oUwrcbj_Cw",
-        "title": "Hero",
-        "artist": "Jeff Williams - Topic"
+        "id": "FNNM-OZd2I0",
+        "title": "Hero (feat. Jonathan Young)",
+        "artist": "Caleb Hyles - Topic"
       },
       {
         "class": "Song",
-        "id": "I6BuLKi1QNw",
-        "title": "WELCOME TO THE BLACK PARADE - My Chemical Romance - (Caleb Hyles \\u0026 Jonathan Young)",
-        "artist": "Caleb Hyles"
+        "id": "iugcliLz7rQ",
+        "title": "The Black Parade",
+        "artist": "Jonathan Young - Topic"
       },
       {
         "class": "Song",
-        "id": "XeYdxOxa2a0",
-        "title": "Get Scared - Told Ya So (Everyone's Out To Get Me)",
-        "artist": "Fearless Records"
+        "id": "oDQKTMJjf20",
+        "title": "Told Ya So",
+        "artist": "Get Scared"
       },
       {
         "class": "Song",
@@ -1389,7 +1127,7 @@
       },
       {
         "class": "Song",
-        "id": "naBBQHbfEOg",
+        "id": "4hshdNgEwTw",
         "title": "Army of the Night",
         "artist": "Powerwolf Official"
       },
@@ -1401,8 +1139,8 @@
       },
       {
         "class": "Song",
-        "id": "NUhbQGlZJcg",
-        "title": "Rasputin (heavy demo Version)",
+        "id": "LK9juQTm1WE",
+        "title": "Rasputin",
         "artist": "Turisas"
       },
       {
@@ -1419,8 +1157,8 @@
       },
       {
         "class": "Song",
-        "id": "XZp3Mtn-YsI",
-        "title": "Starset - It Has Begun (audio)",
+        "id": "Mph84UBO1as",
+        "title": "It Has Begun",
         "artist": "starsetonline"
       },
       {
@@ -1437,44 +1175,44 @@
       },
       {
         "class": "Song",
-        "id": "pYZlS_LG9E0",
-        "title": "The vengeance",
-        "artist": "Black veil brides -Topic"
+        "id": "EgF_v0uUD80",
+        "title": "The Vengeance",
+        "artist": "Black Veil Brides"
       },
       {
         "class": "Song",
-        "id": "ATLJQ3rSK9w",
+        "id": "BE18RlLVyR4",
         "title": "The Greatest Story Ever Told",
         "artist": "Ice Nine Kills"
       },
       {
         "class": "Song",
-        "id": "QsUQy3hhGoU",
-        "title": "Five Finger Death Punch - Got Your Six (Official Audio)",
+        "id": "q_BRG8KI6dE",
+        "title": "Got Your Six",
         "artist": "Five Finger Death Punch"
       },
       {
         "class": "Song",
-        "id": "x9RfXb3JHw8",
-        "title": "Five Finger Death Punch - Jekyll and Hyde (Official Audio)",
+        "id": "yz-h2U5_DKA",
+        "title": "Jekyll and Hyde",
         "artist": "Five Finger Death Punch"
       },
       {
         "class": "Song",
-        "id": "XbSsr3xVg5I",
-        "title": "Five Finger Death Punch - Fake (AUDIO)",
+        "id": "jb-BmN9RYKY",
+        "title": "Fake",
         "artist": "Five Finger Death Punch"
       },
       {
         "class": "Song",
-        "id": "4sxWZ4geXKM",
-        "title": "Five Finger Death Punch - Top Of The World (AUDIO)",
+        "id": "AmMPFlgIC1U",
+        "title": "Top Of The World",
         "artist": "Five Finger Death Punch"
       },
       {
         "class": "Song",
-        "id": "jkiUKB6RwLw",
-        "title": "Five Finger Death Punch - Sham Pain (AUDIO)",
+        "id": "xrCgIIrAf6g",
+        "title": "Sham Pain",
         "artist": "Five Finger Death Punch"
       },
       {
@@ -1491,9 +1229,9 @@
       },
       {
         "class": "Song",
-        "id": "tAv5Rxpl_UY",
-        "title": "ASKING ALEXANDRIA - Antisocialist (Official Music Video)",
-        "artist": "Sumerian Records"
+        "id": "CY18dmk2UcQ",
+        "title": "Antisocialist",
+        "artist": "Asking Alexandria"
       },
       {
         "class": "Song",
@@ -1515,45 +1253,45 @@
       },
       {
         "class": "Song",
-        "id": "NegaklD_NW8",
-        "title": "Escape the Fate - This War Is Ours (The Guillotine Part II)",
-        "artist": "Jacocksky"
+        "id": "CK1Uk2KJYNY",
+        "title": "This War Is Ours (The Guillotine II)",
+        "artist": "Escape the Fate"
       },
       {
         "class": "Song",
-        "id": "XRCKP_2LGl0",
-        "title": "Smells Like Teen Spirit (Devonshire Mix)",
+        "id": "ljUtuoFt-8c",
+        "title": "Smells Like Teen Spirit",
         "artist": "Nirvana"
       },
       {
         "class": "Song",
-        "id": "NeQM1c-XCDc",
-        "title": "Rammstein - Deutschland (Official Video)",
-        "artist": "Rammstein Official"
+        "id": "Zgk3BUNU90k",
+        "title": "Deutschland",
+        "artist": "RADIO TAPOK   - Topic"
       },
       {
         "class": "Song",
-        "id": "QIMlTaIJkJE",
-        "title": "Motionless In White - Immaculate Misconception (Audio)",
-        "artist": "pumpkin queen"
+        "id": "BnO3Io0KOl4",
+        "title": "Immaculate Misconception",
+        "artist": "Motionless In White"
       },
       {
         "class": "Song",
-        "id": "dGg7sW9Qc64",
-        "title": "Motionless In White - We Only Come Out At Night",
-        "artist": "Fearless Records"
+        "id": "WnZbSLjRQ7Y",
+        "title": "We Only Come Out At Night",
+        "artist": "Motionless In White"
       },
       {
         "class": "Song",
-        "id": "aAgGE1bJfEY",
-        "title": "Motionless In White - London In Terror (with lyrics)",
-        "artist": "Fearless Records"
+        "id": "DgoyL7KgqWE",
+        "title": "London In Terror",
+        "artist": "Motionless In White"
       },
       {
         "class": "Song",
-        "id": "s-uJK1vClhM",
-        "title": "Motionless In White - Abigail (w/ Lyrics)",
-        "artist": "Fearless Records"
+        "id": "VhishKMpgT4",
+        "title": "Abigail",
+        "artist": "Motionless In White"
       },
       {
         "class": "Song",
@@ -1563,45 +1301,45 @@
       },
       {
         "class": "Song",
-        "id": "lA2nvYKYLZA",
-        "title": "Motionless In White - \\\"Cobwebs\\\" (w/ lyrics)",
-        "artist": "Fearless Records"
-      },
-      {
-        "class": "Song",
-        "id": "v74FEX6Zyg0",
-        "title": "Motionless In White - .Com Pt. II",
-        "artist": "Fearless Records"
-      },
-      {
-        "class": "Song",
-        "id": "lbt8AMyDwfg",
-        "title": "Motionless In White - Count Choculitis",
-        "artist": "Fearless Records"
-      },
-      {
-        "class": "Song",
-        "id": "GCMnUH_jHTI",
-        "title": "Motionless In White - City Lights",
-        "artist": "Fearless Records"
-      },
-      {
-        "class": "Song",
-        "id": "NZRg-xl6y4M",
-        "title": "Motionless In White - Puppets (The First Snow)",
+        "id": "QZtzmRRFWqQ",
+        "title": "Cobwebs",
         "artist": "Motionless In White"
       },
       {
         "class": "Song",
-        "id": "j7asc2Lko6c",
-        "title": "Motionless In White - Undead Ahead",
-        "artist": "Fearless Records"
+        "id": "ofHn5Uzk73w",
+        "title": ".Com Pt. II",
+        "artist": "Motionless In White"
       },
       {
         "class": "Song",
-        "id": "ccCxaEG0Yq4",
-        "title": "Motionless In White - Scissorhands (The Last Snow)",
-        "artist": "Fearless Records"
+        "id": "8tIaP7nIlvo",
+        "title": "Count Choculitis",
+        "artist": "Motionless In White"
+      },
+      {
+        "class": "Song",
+        "id": "-rTxc5nleQI",
+        "title": "City Lights",
+        "artist": "Motionless In White"
+      },
+      {
+        "class": "Song",
+        "id": "jYUaG8JXI0s",
+        "title": "Puppets (The First Snow)",
+        "artist": "Motionless In White"
+      },
+      {
+        "class": "Song",
+        "id": "72UwSZ6uFBM",
+        "title": "Undead Ahead",
+        "artist": "Motionless In White"
+      },
+      {
+        "class": "Song",
+        "id": "eq81Ts0yclg",
+        "title": "Scissorhands (The Last Snow)",
+        "artist": "Motionless In White"
       },
       {
         "class": "Song",
@@ -1623,9 +1361,9 @@
       },
       {
         "class": "Song",
-        "id": "-eTL7J7uKSI",
-        "title": "Motionless In White - Black Damask (The Fog) (Track 1)",
-        "artist": "Fearless Records"
+        "id": "0MNiUXrlefU",
+        "title": "Black Damask (The Fog)",
+        "artist": "Motionless In White"
       },
       {
         "class": "Song",
@@ -1635,62 +1373,62 @@
       },
       {
         "class": "Song",
-        "id": "fWRv4x4FmeA",
+        "id": "7l-Dy-0SN48",
         "title": "America",
         "artist": "Motionless In White"
       },
       {
         "class": "Song",
-        "id": "HM5W0PBLaA0",
-        "title": "Motionless In White - Burned At Both Ends (Track 4)",
-        "artist": "Fearless Records"
-      },
-      {
-        "class": "Song",
-        "id": "5gR2qDqieD8",
-        "title": "Motionless In White - The Divine Infection (Track 5)",
-        "artist": "Fearless Records"
-      },
-      {
-        "class": "Song",
-        "id": "G85DitwnlKQ",
-        "title": "Motionless In White - Puppets 2 (The Rain) (Feat. Bjorn Speed Strid) (Track 6)",
-        "artist": "Fearless Records"
-      },
-      {
-        "class": "Song",
-        "id": "rtHFQIalLJA",
-        "title": "Sinematic (Acoustic Version)",
+        "id": "mGRrsXqih3M",
+        "title": "Burned At Both Ends",
         "artist": "Motionless In White"
       },
       {
         "class": "Song",
-        "id": "sflCSXM5cEo",
-        "title": "Motionless In White - If It's Dead, We'll Kill It (Feat. Brandan Schieppati) (Track 8)",
-        "artist": "Fearless Records"
+        "id": "Bto1sLjunso",
+        "title": "The Divine Infection",
+        "artist": "Motionless In White"
       },
       {
         "class": "Song",
-        "id": "3SRyT_yN9eA",
+        "id": "-e5OgwXjcsI",
+        "title": "Puppets 2 (The Rain)",
+        "artist": "Motionless In White"
+      },
+      {
+        "class": "Song",
+        "id": "FXiQWSjVDz0",
+        "title": "Sinematic",
+        "artist": "Motionless In White"
+      },
+      {
+        "class": "Song",
+        "id": "TFHVCLUHzPc",
+        "title": "If It's Dead, We'll Kill It",
+        "artist": "Motionless In White"
+      },
+      {
+        "class": "Song",
+        "id": "2qhJOaOFT1M",
         "title": "Synthetic Love",
         "artist": "Motionless In White"
       },
       {
         "class": "Song",
-        "id": "U9TNA6YKDt8",
-        "title": "Motionless In White - Hatefuck (Track 10)",
-        "artist": "Fearless Records"
+        "id": "Cftn3igy7bQ",
+        "title": "Hatefuck",
+        "artist": "Motionless In White"
       },
       {
         "class": "Song",
-        "id": "FXLdxFXcOcE",
-        "title": "Motionless In White - Underdog (Track 11)",
-        "artist": "Fearless Records"
+        "id": "P7WWOKq655E",
+        "title": "Underdog",
+        "artist": "Motionless In White"
       },
       {
         "class": "Song",
-        "id": "fWRv4x4FmeA",
-        "title": "America",
+        "id": "vc_HtYj5JwE",
+        "title": "Infamous",
         "artist": "Motionless In White"
       },
       {
@@ -1701,39 +1439,39 @@
       },
       {
         "class": "Song",
-        "id": "ahQO35mBmnI",
-        "title": "Motionless In White - Fatal",
-        "artist": "Fearless Records"
+        "id": "1Os4QssG-sg",
+        "title": "Fatal",
+        "artist": "Motionless In White"
       },
       {
         "class": "Song",
-        "id": "aGzEZUMibcI",
+        "id": "cziJ7VeX9Ac",
         "title": "America (Celldweller Remix)",
         "artist": "Motionless In White"
       },
       {
         "class": "Song",
-        "id": "atbbOwIKedU",
+        "id": "DD5z88eZvAM",
         "title": "Underdog (Ricky Horror Remix)",
         "artist": "Motionless In White"
       },
       {
         "class": "Song",
-        "id": "aaVwiUap83c",
+        "id": "Kvchcu4Fmls",
         "title": "Sinematic (Combichrist Remix)",
         "artist": "Motionless In White"
       },
       {
         "class": "Song",
-        "id": "fWRv4x4FmeA",
-        "title": "America",
+        "id": "kZaY2z5ZZTs",
+        "title": "America (Radio Mix)",
         "artist": "Motionless In White"
       },
       {
         "class": "Song",
-        "id": "uVX9vSJII0U",
-        "title": "Motionless In White - Reincarnate (Lyric Video)",
-        "artist": "Fearless Records"
+        "id": "Dau_mbx6BPc",
+        "title": "Reincarnate",
+        "artist": "Motionless In White"
       },
       {
         "class": "Song",
@@ -1755,15 +1493,15 @@
       },
       {
         "class": "Song",
-        "id": "9QOU-pyvfbA",
-        "title": "Motionless In White - Everybody Sells Cocaine (Album Stream)",
-        "artist": "Fearless Records"
+        "id": "Hn7EroqUwc8",
+        "title": "Everybody Sells Cocaine",
+        "artist": "Motionless In White"
       },
       {
         "class": "Song",
-        "id": "R26czZ9ToyQ",
-        "title": "Motionless In White - Contempress (feat. Maria Brink) (Album Stream)",
-        "artist": "Fearless Records"
+        "id": "4DzRiuqrxOY",
+        "title": "Contemptress",
+        "artist": "Motionless In White"
       },
       {
         "class": "Song",
@@ -1791,9 +1529,9 @@
       },
       {
         "class": "Song",
-        "id": "T4RwmCQKOlA",
-        "title": "Motionless In White - Dead As Fuck (Official Animated Video)",
-        "artist": "Fearless Records"
+        "id": "nWaU71UhiZE",
+        "title": "Dead As F**k",
+        "artist": "Motionless In White"
       },
       {
         "class": "Song",
@@ -1821,20 +1559,20 @@
       },
       {
         "class": "Song",
-        "id": "FN6WmXSPbAk",
-        "title": "Motionless In White - Queen For Queen (Official Audio)",
+        "id": "BGQhUSh8pMo",
+        "title": "Queen for Queen",
         "artist": "Motionless In White"
       },
       {
         "class": "Song",
-        "id": "mU6zjLZlv6k",
-        "title": "Motionless In White - Necessary Evil feat. Jonathan Davis (Official Audio)",
+        "id": "7e0_yl-dDy8",
+        "title": "Necessary Evil (feat. Jonathan Davis)",
         "artist": "Motionless In White"
       },
       {
         "class": "Song",
-        "id": "nsFTwSydmcI",
-        "title": "Motionless In White - Soft (Official Audio)",
+        "id": "JfISXUBdIyw",
+        "title": "Soft",
         "artist": "Motionless In White"
       },
       {
@@ -1845,14 +1583,14 @@
       },
       {
         "class": "Song",
-        "id": "w6deuL0DZVo",
-        "title": "Motionless In White - Not My Type: Dead As Fuck 2 (Official Audio)",
+        "id": "sLaLQcNOvaQ",
+        "title": "Not My Type: Dead as Fuck 2",
         "artist": "Motionless In White"
       },
       {
         "class": "Song",
-        "id": "214V1oaOpjM",
-        "title": "Motionless In White - Voices (Official Audio)",
+        "id": "q08rTkserJA",
+        "title": "Voices",
         "artist": "Motionless In White"
       },
       {
@@ -1869,32 +1607,32 @@
       },
       {
         "class": "Song",
-        "id": "D_hcfJ95V7M",
-        "title": "Motionless In White   570 Official Audio",
-        "artist": "It Starts With The Music"
-      },
-      {
-        "class": "Song",
-        "id": "FicBfIs1t-o",
-        "title": "Motionless In White - Hourglass (Official Audio)",
+        "id": "sEbIR5Cvass",
+        "title": "570",
         "artist": "Motionless In White"
       },
       {
         "class": "Song",
-        "id": "pHvDEZU1DH4",
-        "title": "Motionless In White-Eternally Yours (AUDIO)",
-        "artist": "CRVENA MORTALKA"
-      },
-      {
-        "class": "Song",
-        "id": "cIEc_11Aydc",
-        "title": "Motionless in White - Disguise [OFFICIAL VIDEO]",
+        "id": "EFWEcVPqCa4",
+        "title": "Hourglass",
         "artist": "Motionless In White"
       },
       {
         "class": "Song",
-        "id": "ZSSPfu-y1VQ",
-        "title": "Motionless In White - Headache (Official Audio)",
+        "id": "ykvcRE5TBIc",
+        "title": "Eternally Yours",
+        "artist": "Motionless In White"
+      },
+      {
+        "class": "Song",
+        "id": "PFqxon3HwsQ",
+        "title": "Disguise",
+        "artist": "Motionless In White"
+      },
+      {
+        "class": "Song",
+        "id": "o9JG_q2SbUg",
+        "title": "Headache",
         "artist": "Motionless In White"
       },
       {
@@ -1905,32 +1643,32 @@
       },
       {
         "class": "Song",
-        "id": "zny4i-RYuiU",
-        "title": "Motionless In White - Thoughts \\u0026 Prayers (Official Audio)",
+        "id": "RFiVkWWQfNM",
+        "title": "Thoughts \\u0026 Prayers",
         "artist": "Motionless In White"
       },
       {
         "class": "Song",
-        "id": "tH0xVWSY2mg",
-        "title": "Motionless In White - Legacy (Official Audio)",
+        "id": "sHX8QnRQQ6A",
+        "title": "Legacy",
         "artist": "Motionless In White"
       },
       {
         "class": "Song",
-        "id": "CYG2kaZ5OfQ",
-        "title": "Motionless In White - Undead Ahead 2: The Tale of the Midnight Ride",
+        "id": "BjcLHGzoJZ0",
+        "title": "Undead Ahead 2: The Tale of the Midnight Ride",
         "artist": "Motionless In White"
       },
       {
         "class": "Song",
-        "id": "DxN8R3YcXjI",
-        "title": "Motionless In White - Holding On To Smoke (Official Audio)",
+        "id": "2qFNk6ydkCs",
+        "title": "Holding On To Smoke",
         "artist": "Motionless In White"
       },
       {
         "class": "Song",
-        "id": "uVysW4TWXS0",
-        "title": "Motionless In White - Another Life (Official Audio)",
+        "id": "d0cN19NIl-M",
+        "title": "Another Life",
         "artist": "Motionless In White"
       },
       {
@@ -1941,14 +1679,14 @@
       },
       {
         "class": "Song",
-        "id": "y7k-jb-u7hk",
+        "id": "wFfQdBJyPrc",
         "title": "Brand New Numb",
         "artist": "Motionless In White"
       },
       {
         "class": "Song",
-        "id": "bmJAHLaVmGY",
-        "title": "Motionless In White - Catharsis (Official Audio)",
+        "id": "2lO85mXFz2s",
+        "title": "Catharsis",
         "artist": "Motionless In White"
       },
       {
@@ -1959,75 +1697,75 @@
       },
       {
         "class": "Song",
-        "id": "ckCai8Dk3yk",
-        "title": "From Ashes To New - Panic",
-        "artist": "From Ashes To New"
+        "id": "LmCKRsCD3ak",
+        "title": "Panic",
+        "artist": "From Ashes to New"
       },
       {
         "class": "Song",
-        "id": "INnieyJ_QPE",
+        "id": "9Bjmyc_q_DE",
         "title": "Kingslayer",
         "artist": "Bring Me The Horizon"
       },
       {
         "class": "Song",
-        "id": "ATLJQ3rSK9w",
+        "id": "BE18RlLVyR4",
         "title": "The Greatest Story Ever Told",
         "artist": "Ice Nine Kills"
       },
       {
         "class": "Song",
-        "id": "1DtZq8O1X-E",
+        "id": "hgcYbaCq7BU",
         "title": "Obey",
         "artist": "Bring Me The Horizon"
       },
       {
         "class": "Song",
-        "id": "2Ay1V9uXI7c",
-        "title": "Five Finger Death Punch - Wrong Side of Heaven (Official Audio)",
+        "id": "3vPo2ADzJKo",
+        "title": "Wrong Side of Heaven",
         "artist": "Five Finger Death Punch"
       },
       {
         "class": "Song",
-        "id": "uL0UPsMb3yU",
-        "title": "Five Finger Death Punch - Bad Company (Official Audio)",
+        "id": "BoZVEG6OJvg",
+        "title": "Bad Company",
         "artist": "Five Finger Death Punch"
       },
       {
         "class": "Song",
-        "id": "k1YJ2FzxCh0",
-        "title": "Black Wedding (feat. Rob Halford) (Edit)",
+        "id": "KXHxy-vt8lo",
+        "title": "Black Wedding (feat. Rob Halford)",
         "artist": "In This Moment"
       },
       {
         "class": "Song",
-        "id": "uCA-Ll2CJFQ",
-        "title": "Falling In Reverse - \\\"Losing My Mind\\\"",
-        "artist": "Epitaph Records"
+        "id": "WuMTDyj8gKk",
+        "title": "Losing My Mind",
+        "artist": "Falling In Reverse"
       },
       {
         "class": "Song",
-        "id": "i8ZcJYWG9KI",
-        "title": "Losing My Life (No Skit Edit) - Falling In Reverse",
-        "artist": "TheAhhIdkBoi"
+        "id": "sVW5fXWlEYY",
+        "title": "Losing My Life",
+        "artist": "Falling In Reverse"
       },
       {
         "class": "Song",
-        "id": "sRAG2NG5bkQ",
-        "title": "Falling In Reverse - \\\"Drugs\\\"",
-        "artist": "Epitaph Records"
+        "id": "TRj03TzYKjg",
+        "title": "Drugs",
+        "artist": "Falling In Reverse"
       },
       {
         "class": "Song",
-        "id": "TuiS92mjZJc",
-        "title": "Falling In Reverse - Popular Monster ( HQ )",
-        "artist": "Metal Heads"
+        "id": "tE_K3vBctRI",
+        "title": "Popular Monster",
+        "artist": "Falling In Reverse"
       },
       {
         "class": "Song",
-        "id": "AKHSWvmiwP8",
-        "title": "Falling In Reverse - \\\"Carry On\\\"",
-        "artist": "Epitaph Records"
+        "id": "Yn0VGJ8HLzY",
+        "title": "Carry On",
+        "artist": "Falling In Reverse"
       },
       {
         "class": "Song",
@@ -2043,33 +1781,33 @@
       },
       {
         "class": "Song",
-        "id": "pGOcCg6PkFI",
-        "title": "Motionless In White - Another Life: Motion Picture Collection (feat. Kerli) [OFFICIAL VIDEO]",
+        "id": "J6BpemCdUJs",
+        "title": "Another Life: Motion Picture Collection (feat. Kerli)",
         "artist": "Motionless In White"
       },
       {
         "class": "Song",
-        "id": "kfDKBZzc6V8",
-        "title": "Motionless In White - Eternally Yours:  Motion Picture Collection (feat. Crystal Joilena)",
+        "id": "vJMp0Zx35Xs",
+        "title": "Eternally Yours: Motion Picture Collection (feat. Crystal Joilena)",
         "artist": "Motionless In White"
       },
       {
         "class": "Song",
-        "id": "RYazu20DUzc",
-        "title": "Motionless In White - Somebody Told Me",
+        "id": "wC3Q_N6QVBs",
+        "title": "Somebody Told Me",
         "artist": "Motionless In White"
       },
       {
         "class": "Song",
-        "id": "J11UFAGMnU0",
-        "title": "Motionless In White - Creatures X: To The Grave (Official Audio)",
+        "id": "Q-bMFpFyHhs",
+        "title": "Creatures X: To The Grave",
         "artist": "Motionless In White"
       },
       {
         "class": "Song",
         "id": "8hLda1HFgio",
         "title": "Addict",
-        "artist": "Lollia - Topic"
+        "artist": "Lollia"
       },
       {
         "class": "Song",
@@ -2085,15 +1823,15 @@
       },
       {
         "class": "Song",
-        "id": "xvfhmGmItPQ",
-        "title": "Punk Goes 90s Vol. 2 - Motionless In White \\\"Du Hast\\\" (Lyric Video)",
-        "artist": "Fearless Records"
+        "id": "9nnK2WDmwmQ",
+        "title": "Du Hast",
+        "artist": "Motionless In White"
       },
       {
         "class": "Song",
-        "id": "LUVQAs8l1VU",
-        "title": "Falling In Reverse - \\\"Pick Up The Phone\\\"",
-        "artist": "Epitaph Records"
+        "id": "LAx-l-ieU9c",
+        "title": "Pick Up The Phone",
+        "artist": "Falling In Reverse"
       },
       {
         "class": "Song",
@@ -2109,15 +1847,15 @@
       },
       {
         "class": "Song",
-        "id": "B2cbhYihBWY",
-        "title": "Falling In Reverse - \\\"The Drug In Me Is Reimagined\\\"",
-        "artist": "Epitaph Records"
+        "id": "NhSa7fYYc6w",
+        "title": "The Drug In Me Is Reimagined",
+        "artist": "Falling In Reverse"
       },
       {
         "class": "Song",
-        "id": "2nWmBJxW9q0",
-        "title": "Falling In Reverse - \\\"I'm Not A Vampire (Revamped)\\\"",
-        "artist": "Epitaph Records"
+        "id": "T6aRv3NmIWU",
+        "title": "I'm Not A Vampire (Revamped)",
+        "artist": "Falling In Reverse"
       },
       {
         "class": "Song",
@@ -2145,25 +1883,25 @@
       },
       {
         "class": "Song",
-        "id": "JR37XyIXqPg",
-        "title": "BLACK VEIL BRIDES - Fields Of Bone (Official Music Video)",
-        "artist": "Sumerian Records"
+        "id": "znWkUghro-0",
+        "title": "Fields of Bone",
+        "artist": "Black Veil Brides"
       },
       {
         "class": "Song",
-        "id": "1FEMsQ60byA",
-        "title": "Black Veil Brides - Scarlet Cross (Audio)",
-        "artist": "Top List Mania"
+        "id": "gD8Dk_-mgtI",
+        "title": "Scarlet Cross",
+        "artist": "Black Veil Brides"
       },
       {
         "class": "Song",
-        "id": "wuD2fq-Y1Iw",
+        "id": "V3Pp4IGPebg",
         "title": "Dear Diary,",
         "artist": "Bring Me The Horizon"
       },
       {
         "class": "Song",
-        "id": "CS0fuQW3Fto",
+        "id": "GbiB9BBs_qk",
         "title": "Parasite Eve",
         "artist": "Bring Me The Horizon"
       },
@@ -2177,7 +1915,7 @@
         "class": "Song",
         "id": "UxZj-4e5_cA",
         "title": "What the Hell (feat. Adriana Figueroa, Annapantsu, Rachie, Chi-Chi, Cami-Cat, Kathy-Chan,...",
-        "artist": "Or3o, Lollia, Sleeping Forest - Topic"
+        "artist": "OR3O"
       },
       {
         "class": "Song",
@@ -2193,38 +1931,38 @@
       },
       {
         "class": "Song",
-        "id": "TwiHjS2MJ20",
+        "id": "odt-tO60mgM",
         "title": "Crimson Skies",
         "artist": "Black Veil Brides"
       },
       {
         "class": "Song",
-        "id": "QJJYpsA5tv8",
-        "title": "Bring Me The Horizon - Can You Feel My Heart",
+        "id": "H8Wx8GV1Oiw",
+        "title": "Can You Feel My Heart",
         "artist": "Bring Me The Horizon"
       },
       {
         "class": "Song",
-        "id": "t_OHvffAOmA",
-        "title": "Bring Me The Horizon - Shadow Moses (Official Audio)",
+        "id": "VXuohkmlupA",
+        "title": "Shadow Moses",
         "artist": "Bring Me The Horizon"
       },
       {
         "class": "Song",
-        "id": "niGZ1nrVwqE",
-        "title": "Bring Me The Horizon - \\\"Crooked Young\\\" (Full Album Stream)",
-        "artist": "Epitaph Records"
-      },
-      {
-        "class": "Song",
-        "id": "lir3dzYIhz0",
-        "title": "Bring Me The Horizon - Sleepwalking",
+        "id": "gA4qFTu0ui8",
+        "title": "Crooked Young",
         "artist": "Bring Me The Horizon"
       },
       {
         "class": "Song",
-        "id": "l3NXyf-n2EI",
-        "title": "Twiztid \\u0026 Ice Nine Kills - Envy (Official Music Video)",
+        "id": "1Y6MNSVNxf8",
+        "title": "Sleepwalking",
+        "artist": "Bring Me The Horizon"
+      },
+      {
+        "class": "Song",
+        "id": "OdsmptkVBQE",
+        "title": "Envy",
         "artist": "Twiztid Official"
       },
       {
@@ -2259,8 +1997,8 @@
       },
       {
         "class": "Song",
-        "id": "XQ0868cjjgw",
-        "title": "Masochist (Instrumental)",
+        "id": "_fJBfvRkDrw",
+        "title": "Masochist",
         "artist": "PolarisAus"
       },
       {
@@ -2271,21 +2009,15 @@
       },
       {
         "class": "Song",
-        "id": "DHkFqE9hlbM",
-        "title": "Matchbook Romance - Monsters HQ + Download Link",
-        "artist": "Tom\u00e1s Pereira"
+        "id": "xMVL7I2RQnE",
+        "title": "Monsters",
+        "artist": "Matchbook Romance - Topic"
       },
       {
         "class": "Song",
-        "id": "ozOb5FcnDf4",
-        "title": "Ice Nine Kills - Hip To Be Scared ft. Jacoby Shaddix (Official Music Video)",
-        "artist": "Ice Nine Kills"
-      },
-      {
-        "class": "Song",
-        "id": "gFCu_YK6yPE",
-        "title": "Disturbed - The Vengeful One (Audio)",
-        "artist": "Professor Gravity"
+        "id": "O_ItSLCZWb0",
+        "title": "The Vengeful One",
+        "artist": "Disturbed"
       },
       {
         "class": "Song",
@@ -2313,27 +2045,15 @@
       },
       {
         "class": "Song",
-        "id": "Yxx_JdoOGB8",
-        "title": "The Amity Affliction - Open Letter [OFFICIAL VIDEO]",
-        "artist": "Roadrunner Records"
+        "id": "I7HAbVInB-g",
+        "title": "Open Letter",
+        "artist": "The Amity Affliction"
       },
       {
         "class": "Song",
-        "id": "kVSh8KNNS6c",
-        "title": "Assault \\u0026 Batteries",
-        "artist": "Ice Nine Kills"
-      },
-      {
-        "class": "Song",
-        "id": "iU9YM1Lfvt8",
-        "title": "Avenged Sevenfold - Hail to the King (Audio)",
+        "id": "MjwttGizNEs",
+        "title": "Hail to the King",
         "artist": "Avenged Sevenfold"
-      },
-      {
-        "class": "Song",
-        "id": "vz1Zkzrs_A0",
-        "title": "Rainy Day",
-        "artist": "Ice Nine Kills"
       },
       {
         "class": "Song",
@@ -2343,8 +2063,8 @@
       },
       {
         "class": "Song",
-        "id": "YGbXuxGh1Dk",
-        "title": "Tetrarch - I'm Not Right [Official Music Video]",
+        "id": "kQLc638G-HA",
+        "title": "I'm Not Right",
         "artist": "Tetrarch"
       },
       {
@@ -2367,29 +2087,111 @@
       },
       {
         "class": "Song",
-        "id": "KDzt6yI3Dw8",
-        "title": "Attack Attack! - Stick Stickly (Official Music Video)",
-        "artist": "riserecords"
+        "id": "6QjBzZwdbuw",
+        "title": "Stick Stickly",
+        "artist": "Attack Attack!"
       },
       {
         "class": "Song",
         "id": "hp0_UGBHofo",
         "title": "Don't Waste Your Breath",
         "artist": "Close To Home - Topic"
-      }
-    ],
-    "poop": [
-      {
-        "class": "Song",
-        "id": "7zQoFaoYTzg",
-        "title": "Arne g\u00e5r mot d\u00f8ra",
-        "artist": "Tephra"
       },
       {
         "class": "Song",
-        "id": "F4dGW0jHbuo",
-        "title": "Fattern - Badekaret Til Pelle",
-        "artist": "Spammah101"
+        "id": "7r3d9tAz_F4",
+        "title": "Instability",
+        "artist": "Dragged Under"
+      },
+      {
+        "class": "Song",
+        "id": "k4D_1QjT2sw",
+        "title": "Gravedancer",
+        "artist": "Of Mice \\u0026 Men"
+      },
+      {
+        "class": "Song",
+        "id": "7dgyTMOt8kg",
+        "title": "Camel by Camel",
+        "artist": "Little V - Topic"
+      },
+      {
+        "class": "Song",
+        "id": "gv06Prgq2z8",
+        "title": "Welcome To Horrorwood",
+        "artist": "Ice Nine Kills"
+      },
+      {
+        "class": "Song",
+        "id": "Q18s88RQitE",
+        "title": "A Rash Decision",
+        "artist": "Ice Nine Kills"
+      },
+      {
+        "class": "Song",
+        "id": "ddaP6FMynok",
+        "title": "Assault \\u0026 Batteries",
+        "artist": "Ice Nine Kills"
+      },
+      {
+        "class": "Song",
+        "id": "WhTlsgAJXTw",
+        "title": "The Shower Scene",
+        "artist": "Ice Nine Kills"
+      },
+      {
+        "class": "Song",
+        "id": "jYQIBflTCic",
+        "title": "Funeral Derangements",
+        "artist": "Ice Nine Kills"
+      },
+      {
+        "class": "Song",
+        "id": "5C_iI1R0ZT0",
+        "title": "Rainy Day",
+        "artist": "Ice Nine Kills"
+      },
+      {
+        "class": "Song",
+        "id": "g9-S0bMUkV4",
+        "title": "Hip To Be Scared",
+        "artist": "Ice Nine Kills"
+      },
+      {
+        "class": "Song",
+        "id": "pDzDDAoaSOM",
+        "title": "Take Your Pick",
+        "artist": "Ice Nine Kills"
+      },
+      {
+        "class": "Song",
+        "id": "iUUjgqJvxsY",
+        "title": "The Box",
+        "artist": "Ice Nine Kills"
+      },
+      {
+        "class": "Song",
+        "id": "sLnsn5kZ9sU",
+        "title": "F.L.Y.",
+        "artist": "Ice Nine Kills"
+      },
+      {
+        "class": "Song",
+        "id": "e9CRlUWBLSM",
+        "title": "Wurst Vacation",
+        "artist": "Ice Nine Kills"
+      },
+      {
+        "class": "Song",
+        "id": "vpGaal1BS_8",
+        "title": "Ex-M\u00f8rtis",
+        "artist": "Ice Nine Kills"
+      },
+      {
+        "class": "Song",
+        "id": "9uEVUjv4-To",
+        "title": "Farewell II Flesh",
+        "artist": "Ice Nine Kills"
       },
       {
         "class": "Song",
@@ -2399,14 +2201,20 @@
       },
       {
         "class": "Song",
-        "id": "k_INM6EUjBI",
-        "title": "Asking Alexandria - Alone Again (Official Lyric Video)",
+        "id": "_hg3CPFAv48",
+        "title": "Alone Again",
         "artist": "Asking Alexandria"
       },
       {
         "class": "Song",
         "id": "td0RozJ7qjA",
         "title": "Faded Out",
+        "artist": "Asking Alexandria"
+      },
+      {
+        "class": "Song",
+        "id": "gSTDrLM3Y34",
+        "title": "Never Gonna Learn",
         "artist": "Asking Alexandria"
       },
       {
@@ -2450,108 +2258,6 @@
         "id": "RNzxZlvXwWI",
         "title": "The Grey",
         "artist": "Asking Alexandria"
-      },
-      {
-        "class": "Song",
-        "id": "V3Pp4IGPebg",
-        "title": "Dear Diary,",
-        "artist": "Bring Me The Horizon"
-      },
-      {
-        "class": "Song",
-        "id": "GbiB9BBs_qk",
-        "title": "Parasite Eve",
-        "artist": "Bring Me The Horizon"
-      },
-      {
-        "class": "Song",
-        "id": "iKhHd9ySXEw",
-        "title": "Teardrops",
-        "artist": "Bring Me The Horizon"
-      },
-      {
-        "class": "Song",
-        "id": "hgcYbaCq7BU",
-        "title": "Obey",
-        "artist": "Bring Me The Horizon"
-      },
-      {
-        "class": "Song",
-        "id": "Nbu3F-JTies",
-        "title": "Itch For The Cure (When Will We Be Free?)",
-        "artist": "Bring Me The Horizon"
-      },
-      {
-        "class": "Song",
-        "id": "INnieyJ_QPE",
-        "title": "Kingslayer",
-        "artist": "Bring Me The Horizon"
-      },
-      {
-        "class": "Song",
-        "id": "3QjcAymJtMY",
-        "title": "1x1",
-        "artist": "Bring Me The Horizon"
-      },
-      {
-        "class": "Song",
-        "id": "caYD1-uck_c",
-        "title": "Ludens",
-        "artist": "Bring Me The Horizon"
-      },
-      {
-        "class": "Song",
-        "id": "EK5P9Xc8cFM",
-        "title": "One Day The Only Butterflies Left Will Be In Your Chest As You March Towards Your Death",
-        "artist": "Bring Me The Horizon"
-      }
-    ]
-  },
-  "736651525023072278": {
-    "new_playlist_five": [
-      {
-        "class": "Song",
-        "id": "SbjKOI8VTY0",
-        "title": "Comatose",
-        "artist": "Skillet"
-      },
-      {
-        "class": "Song",
-        "id": "xFYQQPAOz7Y",
-        "title": "Lose Yourself by Eminem | Eminem",
-        "artist": "EminemMusic"
-      },
-      {
-        "class": "Song",
-        "id": "ngDJIjbAvz4",
-        "title": "American Pie",
-        "artist": "Don McLean"
-      },
-      {
-        "class": "Song",
-        "id": "uB0nvLMy2nQ",
-        "title": "Asking Alexandria - Find Myself (Official Visualizer)",
-        "artist": "Asking Alexandria"
-      },
-      {
-        "class": "Song",
-        "id": "-Fulz4ytZ54",
-        "title": "Toby Keith - I Love This Bar",
-        "artist": "Toby Keith"
-      }
-    ],
-    "uh": [
-      {
-        "class": "Song",
-        "id": "O5vuZW488DA",
-        "title": "B-Mike - Baby Don't Cut (Lyrics)",
-        "artist": "Lyric Videoz"
-      },
-      {
-        "class": "Song",
-        "id": "jcuaA-nJF_0",
-        "title": "Katy McAllister - Another Empty Bottle (Original Song)",
-        "artist": "Katy McAllister"
       }
     ]
   }

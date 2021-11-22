@@ -14,7 +14,7 @@ class SongEncoder(json.JSONEncoder):
                 'class': 'Song',
                 'id': object.id,
                 'title': object.title,
-                'artist': object.artist
+                'artist': object.artist,
             }
         else: return super().default(object)
 
@@ -109,7 +109,7 @@ class Playlist(commands.Cog):
 
     @playlist.command(
         brief='Adds songs to playlists',
-        help='This adds a song to a playlist, either by providing a url, or a YouTube search. Currently supports URLs from: YouTube',
+        help='This adds a song to a playlist by a YouTube search. Put your search in italics *like this* to search songs only. Currently supports: YouTube',
         usage='playlist add [search|url]'
     )
     async def add(self, ctx, playlist, *, search):
@@ -154,7 +154,7 @@ class Playlist(commands.Cog):
     @playlist.command(
         brief='Plays a playlist from URL',
         help='This plays an external playlist, provided by URL. The `play` command also works as a shortcut for this one. Note: This does not play bot playlists, to play bot playlists, see `playlist play`. Currently supports: YouTube, Spotify',
-        usage='playlist quickplay [url]'
+        usage='playlist quickplay [playlist url]\nplay [playlist url]'
     )
     async def quickplay(self, ctx, url):
         playlist = search_playlist(url)
@@ -188,7 +188,7 @@ class Playlist(commands.Cog):
     @playlist.command(
         brief='Combines playlists together',
         help='This combines two playlists together, either by combining them into the 1st list, or a 3rd target list if provided. If the 3rd target list doesn\'t exist, it will be automatically created. This only combines playlists stored within the bot, to import external playlists, see `playlist import`',
-        usage='playlist combine [list1] [list2] *[targetlist]'
+        usage='playlist combine [list1] [list2] \\*[targetlist]'
     )
     async def combine(self, ctx, name1, name2, targetname=None):
         list1 = get_list(ctx, name1)
