@@ -17,7 +17,7 @@ page_size = 20
 queues = {}
 guild_id = lambda ctx: ctx.guild.id if ctx.guild else None
 sp = spotipy.Spotify(client_credentials_manager=SpotifyClientCredentials(client_id='50a7e02b71c24576a259fe1e8b2df078', client_secret='dba494661d2c4812b1d158cd87f54f98'))
-playlist_urls = ('https://www.youtube.com/playlist?list=', 'https://open.spotify.com/playlist/')
+playlist_urls = ('https://www.youtube.com/playlist?list=', 'https://open.spotify.com/playlist/', 'hhtps://open.spotify.com/album/')
 is_url_playlist = lambda url: any(filter(lambda playlist_url: url.startswith(playlist_url), playlist_urls))
 
 class Song:
@@ -191,7 +191,7 @@ def search_playlist(url):
         artists = re.findall('"shortBylineText":{"runs":\[{"text":"(.*?)","navigationEndpoint":', html)
         for id, title, artist in zip(ids, titles, artists):
             yield Song(id, title, artist)
-    elif url.startswith('https://open.spotify.com/playlist/') or url.startswith('https://open.spotify.com/playlist/'):
+    elif url.startswith('https://open.spotify.com/playlist/') or url.startswith('https://open.spotify.com/album/'):
         tracks = get_playlist_tracks(url)
         for track in tracks:
             track = track['track']
