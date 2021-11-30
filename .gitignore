@@ -4,3 +4,4 @@ ffmpeg.exe
 active.txt
 *.html
 playlists.json
+.cache
