@@ -18,7 +18,7 @@ class Music(commands.Cog):
         now = dt.now()
         ids = reversed(tuple(i for i, queue in queues.items() if not queue.vc.is_playing() and (now - queue.last_played).total_seconds() > 300))
         for i in ids:
-            await queues[i].vc.disconnect()
+            if queues[i].vc.is_connected(): await queues[i].vc.disconnect()
             del queues[i]
 
     @commands.guild_only()

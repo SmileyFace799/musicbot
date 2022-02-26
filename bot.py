@@ -66,6 +66,13 @@ async def on_ready():
     print('Bot is ready')
 
 @bot.event
+async def on_message(msg):
+    if msg.content.startswith(active.prefix) and msg.author.id == 549302960601956363 and msg.channel.id != 777639867974680577 and msg.guild and msg.guild.id == 777638039391698995:
+        await msg.channel.send(f'Hey Pepper, use {msg.guild.get_channel(777639867974680577).mention} :)')
+        return
+    await bot.process_commands(msg)
+
+@bot.event
 async def on_command_error(ctx, e):
     if isinstance(e, commands.CheckFailure):
         await ctx.send(f'{type(e).__name__}: {e}')
