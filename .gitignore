@@ -5,3 +5,5 @@ active.txt
 *.html
 playlists.json
 .cache
+testcode.py
+secret.txt

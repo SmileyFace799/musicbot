@@ -4,6 +4,7 @@ from exceptions import *
 import json
 import re
 from traceback import print_tb
+import requests
 
 class Active_Bot:
     def __init__(self, name):
@@ -63,7 +64,16 @@ for ext in exts:
 
 @bot.event
 async def on_ready():
-    print('Bot is ready')
+    print(f'{active.name} is ready')
+    music_cog = bot.get_cog('Music')
+    music_cog.online_player_url = 'http://192.168.50.197/devbot/' if active.name == 'WeeBot' else 'https://smiles.itzfaded.page/bot/'
+    try: requests.get(music_cog.online_player_url + 'player.json')
+    except: music_cog.con = False
+    else:
+        music_cog.con = True
+        requests.post(music_cog.online_player_url + 'save-to-log.php', data={'jsonTxt': '{}'})
+        music_cog.online_player.start()
+    print(('C' if music_cog.con else 'Not c') + 'onnected to online player')
 
 @bot.event
 async def on_message(msg):

@@ -61,9 +61,9 @@ class Song:
         return self.__class__(self.id, self.title, self.artist)
 
 class Queue(list):
-    def __init__(self, ctx):
-        self.guild = ctx.guild
-        self.loop = ctx.bot.loop
+    def __init__(self, guild, loop):
+        self.guild = guild
+        self.loop = loop
         self.skip = False
         self.shuffle = False
         self.repeat = False
@@ -120,23 +120,26 @@ class Queue(list):
     def vc(self):
         return self.guild.voice_client
 
-def get_queue(ctx):
-    id = guild_id(ctx)
-    return queues[id] if id in queues.keys() else None
+def get_queue(guild):
+    return queues[guild.id] if guild.id in queues.keys() else None
 
-def make_queue(ctx):
-    id = guild_id(ctx)
-    if id not in queues.keys(): queues[id] = Queue(ctx)
-    return get_queue(ctx)
+def make_queue(guild, loop):
+    if guild.id not in queues.keys(): queues[guild.id] = Queue(guild, loop)
+    return get_queue(guild)
 
-def del_queue(ctx):
-    id = guild_id(ctx)
-    if id in queues.keys(): del queues[id]
+def del_queue(guild):
+    if guild.id in queues.keys(): del queues[guild.id]
+
+def get_voice_member(user):
+    for guild in user.mutual_guilds:
+        for channel in filter(lambda channel: type(channel) == discord.VoiceChannel, guild.channels):
+            if user.id in (member.id for member in channel.members):
+                return guild.get_member(user.id)
 
 async def queue_song(ctx, song, queue=None, announce=True):
     song = song.copy()
     if not song.has_ctx: song.add_ctx(ctx)
-    if not queue: queue = make_queue(ctx)
+    if not queue: queue = make_queue(ctx.guild, ctx.bot.loop)
     queue.append(song) #Song must have ctx
     if len(queue) == 1:
         queue.play()

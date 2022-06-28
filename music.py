@@ -6,6 +6,9 @@ import re
 from lyricsgenius import Genius
 import typing
 from datetime import datetime as dt
+import json
+from player_cmds import Cmds
+import requests
 genius = Genius('acU_6ftNqV-0zCxqo7d9gG7r__FnpVh6YAXIQD-CedWBuoxySEidUwoYn8h6Mt9O')
 
 class Music(commands.Cog):
@@ -13,13 +16,39 @@ class Music(commands.Cog):
         self.bot = bot
         self.queue_cleaner.start()
 
+        self.cmds = Cmds(bot)
+
     @tasks.loop(seconds=5)
     async def queue_cleaner(self):
         now = dt.now()
-        ids = reversed(tuple(i for i, queue in queues.items() if not queue.vc.is_playing() and (now - queue.last_played).total_seconds() > 300))
+        ids = reversed(tuple(i for i, queue in queues.items() if not queue.vc or (not queue.vc.is_playing() and (now - queue.last_played).total_seconds() > 300)))
         for i in ids:
-            if queues[i].vc.is_connected(): await queues[i].vc.disconnect()
+            if queues[i].vc and queues[i].vc.is_connected(): await queues[i].vc.disconnect()
             del queues[i]
+
+    @tasks.loop(seconds=0.1)
+    async def online_player(self):
+        try:
+            response = requests.get(self.online_player_url + 'player.json')
+            if response:
+                try:
+                    data = response.json()
+                except json.JSONDecodeError as e:
+                    print(e)
+            else: return
+            if data:
+                requests.post(self.online_player_url + 'save-to-log.php', data={'jsonTxt': '{}'})
+                data['id'] = int(data['id'])
+                if data['action'] == 'join':
+                    user = self.bot.get_user(data['id'])
+                    await self.cmds.join(user)
+                elif data['action'] == 'leave':
+                    user = self.bot.get_user(data['id'])
+                    await self.cmds.leave(user)
+        except Exception as e:
+            print(e)
+            return #oi spaghet
+
 
     @commands.guild_only()
     @commands.command(
@@ -28,10 +57,13 @@ class Music(commands.Cog):
         usage='join'
     )
     async def join(self, ctx):
+        self.cmds.join(ctx.author, ctx.channel)
+        '''
         if not ctx.author.voice: raise NoVoiceException('Not connected to a voice chat')
         await ctx.author.voice.channel.connect()
-        make_queue(ctx)
+        make_queue(ctx.guild, self.bot.loop)
         await ctx.send('Joined!')
+        '''
 
     @vc()
     @commands.guild_only()
@@ -53,11 +85,15 @@ class Music(commands.Cog):
         usage='leave'
     )
     async def leave(self, ctx):
+        self.cmds.leave(ctx.author, ctx.channel)
+
+        '''
         if not ctx.voice_client: raise InvalidStateException(f'Bot is not connected')
         if ctx.voice_client.channel != ctx.author.voice.channel: raise InvalidStateException('You must be in the same channel as the bot to disconnect it')
-        del_queue(ctx)
+        del_queue(ctx.guild)
         await ctx.voice_client.disconnect()
         await ctx.send('Left!')
+        '''
 
     @vc()
     @commands.guild_only()
@@ -99,7 +135,7 @@ class Music(commands.Cog):
     )
     async def queue(self, ctx, page:typing.Optional[int]=1):
         get_str = lambda b: 'On' if b else 'Off'
-        queue = get_queue(ctx)
+        queue = get_queue(ctx.guild)
         pagecount = (len(queue) - 1) // page_size + 1
         page_queue = queue[page_size * (page - 1):page_size * page]
         if queue:
@@ -144,7 +180,7 @@ class Music(commands.Cog):
         usage='skip *[index]'
     )
     async def skip(self, ctx, index:typing.Optional[int]=None):
-        queue = get_queue(ctx)
+        queue = get_queue(ctx.guild)
         queue.skip = True
         if index:
             queue.next = index
@@ -161,7 +197,7 @@ class Music(commands.Cog):
         aliases=['mix', 'shf', 'sf']
     )
     async def shuffle(self, ctx):
-        queue = get_queue(ctx)
+        queue = get_queue(ctx.guild)
         queue.shuffle = not queue.shuffle
         await ctx.send('Queue shuffled' if queue.shuffle else 'Queue un-shuffled')
 
@@ -174,7 +210,7 @@ class Music(commands.Cog):
         aliases=['rpt', 'rp']
     )
     async def repeat(self, ctx):
-        queue = get_queue(ctx)
+        queue = get_queue(ctx.guild)
         queue.repeat = not queue.repeat
         await ctx.send('Repeating song' if queue.repeat else 'No longer repeating song')
 
@@ -187,7 +223,7 @@ class Music(commands.Cog):
         aliases=['repeatque', 'repeatq', 'rqueue', 'rque', 'rq']
     )
     async def repeatqueue(self, ctx):
-        queue = get_queue(ctx)
+        queue = get_queue(ctx.guild)
         queue.repeatqueue = not queue.repeatqueue
         await ctx.send('Repeating queue' if queue.repeatqueue else 'No longer repeating queue')
 
@@ -199,7 +235,7 @@ class Music(commands.Cog):
         usage='stop'
     )
     async def stop(self, ctx):
-        queue = get_queue(ctx)
+        queue = get_queue(ctx.guild)
         queue.clear()
         ctx.voice_client.stop()
         await ctx.send('Music stopped')
@@ -211,7 +247,7 @@ class Music(commands.Cog):
     )
     async def lyrics(self, ctx, *, target:typing.Union[discord.Member, str]=None):
         if not target: target = ctx.author
-        queue = get_queue(ctx)
+        queue = get_queue(ctx.guild)
         spotify = next(filter(lambda a: isinstance(a, discord.Spotify), target.activities), None) if isinstance(target, discord.abc.User) else None
 
         if type(target) == str:

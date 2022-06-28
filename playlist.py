@@ -143,7 +143,7 @@ class Playlist(commands.Cog):
         playlist = get_list(ctx, playlist)
         if index is not None: await queue_song(ctx, playlist[index - 1])
         else:
-            queue = get_queue(ctx)
+            queue = get_queue(ctx.guild)
             if queue is not None and queue.shuffle:
                 playlist = list(playlist)
                 playlist.insert(0, playlist.pop(randint(0, len(playlist) - 1)))
