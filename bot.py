@@ -72,7 +72,8 @@ async def on_ready():
     else:
         music_cog.con = True
         requests.post(music_cog.online_player_url + 'save-to-log.php', data={'jsonTxt': '{}'})
-        music_cog.online_player.start()
+        if not music_cog.online_player.is_running():
+            music_cog.online_player.start()
     print(('C' if music_cog.con else 'Not c') + 'onnected to online player')
 
 @bot.event
