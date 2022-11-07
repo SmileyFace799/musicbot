@@ -45,7 +45,8 @@ class Song:
     def add_source(self, opts):
         for i in range(5):
             try: pafy_object = pafy.new(self.id)
-            except:
+            except Exception as e:
+                print(e)
                 if i == 4:
                     self.has_source = None
                     return self

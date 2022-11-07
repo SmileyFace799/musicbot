@@ -1,2 +1,2 @@
-putty -ssh smiley@192.168.50.203
+putty -ssh smiley@10.0.0.1
 exit
