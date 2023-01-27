@@ -57,7 +57,7 @@ class Music(commands.Cog):
         usage='join'
     )
     async def join(self, ctx):
-        self.cmds.join(ctx.author, ctx.channel)
+        await self.cmds.join(ctx.author, ctx.channel)
         '''
         if not ctx.author.voice: raise NoVoiceException('Not connected to a voice chat')
         await ctx.author.voice.channel.connect()
@@ -85,7 +85,7 @@ class Music(commands.Cog):
         usage='leave'
     )
     async def leave(self, ctx):
-        self.cmds.leave(ctx.author, ctx.channel)
+        await self.cmds.leave(ctx.author, ctx.channel)
 
         '''
         if not ctx.voice_client: raise InvalidStateException(f'Bot is not connected')
@@ -124,6 +124,20 @@ class Music(commands.Cog):
     async def search(self, ctx, *, search):
         song = await find_song(ctx, search)
         if song: await queue_song(ctx, song)
+
+    @vc()
+    @commands.guild_only()
+    @commands.command(
+        brief='Removes a song from queue',
+        help='Removes a song from the queue, based on a specified index',
+        usage='remove [index]'
+    )
+    async def remove(self, ctx, index:typing.Optional[int]):
+        queue = get_queue(ctx.guild)
+        if 2 <= index <= len(queue):
+            await ctx.send(f'Removed {queue.pop(index - 1).title} from the queue')
+        elif index == 1: raise BadArgument(f'Cannot remove the song currently playing. Use `{ctx.prefix}skip` instead')
+        else: raise BadArgument(f'Index must be between 2 and the amount of songs in the playlist (Currently {len(queue)})')
 
     @vc()
     @commands.guild_only()
