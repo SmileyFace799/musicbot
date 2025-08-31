@@ -1,4 +1,4 @@
-{
+{ // These tokens are no longer valid, as this project is no longer maintained
   "tunebot": {
     "token": "NjUxNTYzMjUxODk2OTQyNjAy.XebtkA.5Rp2Ebx5UjwZR62Eotz8r7Hvf9c",
     "prefix": "t!"
